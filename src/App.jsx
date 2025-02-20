@@ -6,8 +6,7 @@ import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import LandingPage from "./Pages/LandingPage";
 import OrganisationLayout from "./Layout/Organisation/OrganisationLayout";
-import MainContent from "./Component/Organisation/main-content";
-
+import MainContent from "./Pages/organisation/main-content";
 const App = () => {
   // lenis
   useEffect(() => {

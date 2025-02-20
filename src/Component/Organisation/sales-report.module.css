@@ -1,0 +1,65 @@
+.container {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    padding: 24px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .header h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .moreButton {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 4px 8px;
+  }
+  
+  .chart {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .barLabel {
+    width: 120px;
+    font-size: 14px;
+  }
+  
+  .barTrack {
+    flex: 1;
+    height: 8px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .barValue {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+  }
+  
+  .barAmount {
+    font-size: 14px;
+    color: #666;
+    width: 60px;
+  }
+  
+  

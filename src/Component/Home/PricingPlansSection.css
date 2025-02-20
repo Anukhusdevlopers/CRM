@@ -1,0 +1,142 @@
+.pricing-section {
+    padding: 80px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.plan-btn span {
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: #022a26;
+    border: 1px solid #c3c3c3;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.pricing-section h1 {
+    margin-top: 32px;
+    color: #100a30;
+    font-size: 2.5rem;
+    max-width: 600px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.pricing-section p {
+    color: #777;
+    font-size: 1.1rem;
+    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+/* Pricing Cards */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+
+/* Common Card Styling */
+.card {
+    border-radius: 16px;
+    padding: 2.5rem;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+
+/* Gradient Card */
+.gradient-bg {
+    background: linear-gradient(180deg, #022f2a, #0c554e);
+    color: #fff;
+}
+
+.gradient-bg h2, 
+.gradient-bg p {
+    color: #ffffff;
+}
+
+/* Light Background Card */
+.light-bg {
+    background-color: #f5f6fb;
+    color: #100a30;
+}
+
+.light-bg h2, 
+.light-bg p {
+    color: #100a30;
+}
+
+/* Card Button */
+.card button {
+    padding: 16px 20px;
+    width: 100%;
+    border-radius: 12px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    align-items: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Colors */
+.gradient-bg button {
+    background-color: #f5f6fb;
+    color: #022a26;
+}
+
+.light-bg button {
+    background: linear-gradient(to right, #022f2a, #0c554e);
+    color: #fff;
+}
+
+/* Button Hover Effect */
+.card button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pricing-section h1 {
+        font-size: 2rem;
+    }
+
+    .pricing-section p {
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .pricing-section p {
+        font-size: 0.95rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+}

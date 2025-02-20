@@ -1,0 +1,176 @@
+
+.growth .container {
+    display: flex;
+    align-items: center;
+    min-width: 1200px;
+}
+
+.growth .left {
+    position: relative;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+
+}
+
+.growth .left>div {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.growth .col1 {
+    margin-top: 20px;
+}
+
+.growth .col3 {
+    padding-top: 50px;
+}
+
+.growth .card {
+    width: 100px;
+    margin-top: 10px;
+    height: 100px;
+    position: relative;;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #ffffff;
+    transition: all 0.2s ease-in-out;
+}
+
+.growth .card p{
+    position: absolute;
+    bottom: 10%;
+}
+
+.growth .icon {
+    font-size: 30px;
+}
+
+.growth p {
+    margin: 5px 0 0;
+    font-weight: bold;
+}
+
+.growth .left-1 {
+    position: absolute;
+    z-index: 99;
+}
+
+.growth .left-2 {
+    position: absolute;
+    border: 5px dotted #989AA8;
+    height: 130px;
+    border-radius: 30px;
+    width: 130px;
+    background: #fff;
+    left: 85%;
+    z-index: 1;
+
+}
+
+.growth .center {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.growth .logo {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    border-radius: 30px;
+    border: 10px solid rgb(199, 216, 196);
+}
+
+.growth .center::after {
+    content: "";
+    width: 27%;
+    height: 1px;
+    border-top: 5px dotted #0A322E;
+
+}
+
+.growth .center::before {
+    content: "";
+    width: 27%;
+    height: 1px;
+    border-top: 5px dotted #989AA8;
+
+}
+
+.growth .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 12%;
+}
+
+.growth .right div {
+    position: absolute;
+}
+
+.growth .right .card1 {
+    width: 250px;
+    height: 200px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px #f0f0f0;
+}
+
+.growth .right .card2 {
+    width: 125px;
+    border-radius: 15px;
+    height: 100px;
+    background: white;
+    box-shadow: 3px 3px 10px #f0f0f0;
+    left: 70%;
+    top: -120px;
+}
+
+@media screen and (max-width : 1170px) {
+    .growth {
+        scale: 0.9;
+    }
+
+}
+
+@media screen and (max-width : 980px) {
+    .growth .container{
+        scale: 0.7;
+        height: 370px;
+    }
+}
+
+@media screen and (max-width : 790px){
+    .growth{
+        scale: 0.7;
+    }
+    .growth .container{
+        height: 210px;
+    }
+}
+
+@media screen and (max-width : 610px) {
+    .growth .container{
+        scale: 0.6;
+        height: 180;
+    }
+}
+
+@media screen and (max-width : 550px) {
+    .growth .container{
+        scale: .4;
+        height: 110px;
+    }
+}

@@ -1,0 +1,45 @@
+.count-up-container {
+    padding: 60px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+    flex-wrap: wrap;
+    text-align: center;
+    font-family: 'Niramit', sans-serif;
+}
+
+.count-up-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.count-up-box:hover {
+    transform: translateY(-5px);
+}
+
+.count-up-box h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #100a30;
+}
+
+.count-up-box p {
+    font-size: 1.2rem;
+    color: #6c6b71;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .count-up-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .count-up-box h2 {
+        font-size: 2.4rem;
+    }
+
+    .count-up-box p {
+        font-size: 1.1rem;
+    }
+}

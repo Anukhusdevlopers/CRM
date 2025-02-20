@@ -1,0 +1,137 @@
+.header-section {
+    min-height: 70vh;
+    background: linear-gradient(#f9f9f9, #fff);
+    padding-top: 12vh;
+    font-family: 'Ysabeau';
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    overflow-x: hidden;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .header-section h1 {
+    color: #100a30;
+    font-size: 4rem;
+    width: 80%;
+    max-width: 600px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  
+  .header-section p {
+    color: #777;
+    font-size: 1.2rem;
+    width: 80%;
+    max-width: 400px;
+    line-height: 1.6;
+    margin: 16px 0;
+  }
+  
+  .header-section .semi-circle {
+    height: 100vh;
+    position: absolute;
+    width: 100vh;
+    border-radius: 50%;
+  }
+  
+  .header-section .left {
+    top: -70px;
+    left: -25%;
+  }
+  
+  .header-section .right {
+    top: -70px;
+    right: -25%;
+  }
+  
+  .header-section button {
+    margin-top: 8px;
+    padding: 14px 36px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-family: 'Niramit';
+    gap: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .header-section h1 {
+      font-size: 2.5rem;
+    }
+  
+    .header-section p {
+      font-size: 1rem;
+    }
+  
+    .header-section button {
+      padding: 12px 24px;
+      font-size: 1rem;
+    }
+  
+    .header-section .semi-circle {
+      height: 80vh;
+      width: 80vh;
+    }
+  
+    .header-section .left {
+      top: -50px;
+      left: -50%;
+    }
+  
+    .header-section .right {
+      top: -50px;
+      right: -50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-section h1 {
+      font-size: 2rem;
+    }
+  
+    .header-section p {
+      font-size: 0.95rem;
+    }
+  
+    .header-section button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  
+    .header-section .semi-circle {
+      height: 60vh;
+      width: 60vh;
+    }
+  
+    .header-section .left {
+      top: -30px;
+      left: -60%;
+    }
+  
+    .header-section .right {
+      top: -30px;
+      right: -60%;
+    }
+
+   
+  }
+  
+
+  @media(max-width:400px){
+    .button-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container button{
+        width: 180px;
+        display: flex;
+        justify-content: center;
+    }
+  }

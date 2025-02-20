@@ -4,7 +4,7 @@ import UserLayout from "./Layout/UserLayout/UserLayout";
 import "remixicon/fonts/remixicon.css";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
-import LandingPage from "./Pages/LandingPage";
+import LandingPage from "./Pages/home/LandingPage";
 import OrganisationLayout from "./Layout/Organisation/OrganisationLayout";
 import MainContent from "./Pages/organisation/main-content";
 const App = () => {

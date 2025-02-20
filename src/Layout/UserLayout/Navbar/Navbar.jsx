@@ -52,10 +52,10 @@ const Navbar = () => {
           </div>
 
           <div className="center-part">
-            <Link to="#">Solution <i className="ri-arrow-down-s-line"></i></Link>
-            <Link to="#">Pricing</Link>
-            <Link to="#">Blog</Link>
-            <Link to="#">Company</Link>
+            <Link to="/">Solution <i className="ri-arrow-down-s-line"></i></Link>
+            <Link to="/pricing">Pricing</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/company">Company</Link>
           </div>
 
           <button onClick={handleToggle} className={toggle ? "menuactive" : "menuicon"}>

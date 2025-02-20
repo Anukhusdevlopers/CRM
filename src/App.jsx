@@ -7,6 +7,9 @@ import "lenis/dist/lenis.css";
 import LandingPage from "./Pages/home/LandingPage";
 import OrganisationLayout from "./Layout/Organisation/OrganisationLayout";
 import MainContent from "./Pages/organisation/main-content";
+import Pricing from "./Pages/home/pricing";
+import Blog from "./Pages/home/blog";
+import Company from "./Pages/home/company";
 const App = () => {
   // lenis
   useEffect(() => {
@@ -25,6 +28,9 @@ const App = () => {
           {/* user pages  */}
           <Route path="/" element={<UserLayout />}>
             <Route index element={<LandingPage />} />
+            <Route path="pricing" element={<Pricing />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="company" element={<Company />} />
           </Route>
 
           {/* organisation */}

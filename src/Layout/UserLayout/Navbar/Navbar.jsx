@@ -6,7 +6,7 @@ import TypesEOrO from "../../../Component/Home/TypesEOrO";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-  const [loginPopUp, setLoginPopUp] = useState(false);
+  const [loginPopUp, setLoginPopUp] = useState(false); 
   const [signupPopUp, setSignupPopUp] = useState(false);
   const popupRef = useRef(null);
 
@@ -14,20 +14,24 @@ const Navbar = () => {
 
   const handleBothButton = (e, actionType) => {
     e.preventDefault();
-    setToggle(false)
+    setToggle(false);
     if (actionType === "login") {
-      setLoginPopUp(true);
+      setLoginPopUp((prev) => !prev);
       setSignupPopUp(false);
     } else {
-      setSignupPopUp(true);
+      setSignupPopUp((prev) => !prev);
       setLoginPopUp(false);
     }
   };
 
-  // Close the popup when clicking outside
+  // Close the popup when clicking outside or on the same button
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (popupRef.current && !popupRef.current.contains(event.target)) {
+      if (
+        popupRef.current &&
+        !popupRef.current.contains(event.target) &&
+        !event.target.closest(".trigger-button")
+      ) {
         setLoginPopUp(false);
         setSignupPopUp(false);
       }
@@ -65,6 +69,7 @@ const Navbar = () => {
 
           <div className="right-part">
             <button
+              className="trigger-button"
               style={{
                 background: "#fff",
                 border: "2px solid #e1e1e1",
@@ -75,6 +80,7 @@ const Navbar = () => {
               Login
             </button>
             <button
+              className="trigger-button"
               style={{
                 background: "linear-gradient(to right, rgb(7, 53, 48), #0b4a44)",
                 color: "#fff",
@@ -85,7 +91,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-      </nav>
+      </nav>  
 
       {/* Popups (Wrapped in ref for click detection) */}
       {(loginPopUp || signupPopUp) && (
@@ -121,12 +127,14 @@ const Navbar = () => {
 
           <div className="mobile-button-container">
             <button
+              className="trigger-button"
               style={{ background: "#fff", border: "2px solid #e1e1e1", color: "#100a30" }}
               onClick={(e) => handleBothButton(e, "login")}
             >
               Login
             </button>
             <button
+              className="trigger-button"
               style={{ background: "linear-gradient(to right, rgb(7, 53, 48), #0b4a44)", color: "#fff" }}
               onClick={(e) => handleBothButton(e, "signup")}
             >

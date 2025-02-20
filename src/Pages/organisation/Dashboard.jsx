@@ -1,11 +1,11 @@
-import styles from "./main-content.module.css";
+import styles from "./Dashboard.module.css";
 import { MetricsCards } from "../../Component/Organisation/metrics-cards.jsx";
 import { TransactionList } from "../../Component/Organisation/transaction-list.jsx";
 import { RevenueChart } from "../../Component/Organisation/revenue-chart.jsx";
 import { SalesReport } from "../../Component/Organisation/sales-report.jsx";
 import { PerformanceChart } from "../../Component/Organisation/performance-chart.jsx";
 
-const MainContent = () => {
+const Dashboard = () => {
   return (
     <main className={styles.main}>
       <header className={styles.header}>
@@ -58,4 +58,4 @@ const MainContent = () => {
   );
 };
 
-export default MainContent;
+export default Dashboard;

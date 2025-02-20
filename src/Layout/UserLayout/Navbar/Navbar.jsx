@@ -49,7 +49,7 @@ const Navbar = () => {
           <div style={{ display: "flex", gap: "4px", alignItems: "center" }}>
             <img style={{ scale: 0.7 }} src={logo} alt="Logo" />
             <h1 style={{ color: "#100a30" }}>CRM+</h1>
-          </div>
+          </div> 
 
           <div className="center-part">
             <Link to="/">Solution <i className="ri-arrow-down-s-line"></i></Link>

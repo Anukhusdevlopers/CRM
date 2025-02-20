@@ -6,10 +6,10 @@ import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import LandingPage from "./Pages/home/LandingPage";
 import OrganisationLayout from "./Layout/Organisation/OrganisationLayout";
-import MainContent from "./Pages/organisation/main-content";
 import Pricing from "./Pages/home/pricing";
 import Blog from "./Pages/home/blog";
 import Company from "./Pages/home/company";
+import Dashboard from "./Pages/organisation/Dashboard";
 const App = () => {
   // lenis
   useEffect(() => {
@@ -35,7 +35,7 @@ const App = () => {
 
           {/* organisation */}
           <Route path="/organisation" element={<OrganisationLayout />}>
-            <Route path="dashboard" element={<MainContent /> } />
+            <Route path="dashboard" element={<Dashboard /> } />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -56,7 +56,7 @@ const OrganisationSidebar = () => {
 
       <div className={styles.profile}>
         <div className={styles.avatar}>
-          <img src="/placeholder.svg" alt="Profile" width={40} height={40} />
+          <img src="https://avatars.githubusercontent.com/u/165462791?u=be403d96cec1795524716356250c47b962e45e55&v=4" alt="Profile" width={40} height={40} />
         </div>
         <div className={styles.profileInfo}>
           <h3>Fandaww Punx</h3>

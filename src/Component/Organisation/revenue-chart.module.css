@@ -1,83 +1,141 @@
 .container {
-    background: white;
-    border: 1px solid #eee;
-    border-radius: 16px;
-    padding: 24px;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 24px;
-  }
-  
-  .header h3 {
-    margin: 0 0 8px 0;
-    font-size: 16px;
-  }
-  
-  .amount {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 4px;
-  }
-  
-  .change {
-    color: #4caf50;
-    font-size: 14px;
-  }
-  
-  .legend {
-    display: flex;
-    gap: 16px;
-  }
-  
-  .legendItem {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-  }
-  
-  .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-  }
-  
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.header h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.amount {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.change {
+  color: #4caf50;
+  font-size: 14px;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  gap: 16px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Chart */
+.chart {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  padding-top: 24px;
+}
+
+/* Bars */
+.bar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.barGroup {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.barValue {
+  width: 10px;
+  border-radius: 4px;
+  transition: height 0.3s ease;
+}
+
+/* Labels */
+.barLabel {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .chart {
-    height: 200px;
-    display: flex;
-    align-items: flex-end;
-    gap: 16px;
-    padding-top: 24px;
+    gap: 12px;
   }
-  
-  .bar {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .barGroup {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    gap: 4px;
-    justify-content: center;
-  }
-  
+
   .barValue {
     width: 8px;
-    border-radius: 4px;
-    transition: height 0.3s ease;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chart {
+    height: 180px;
+    gap: 10px;
+  }
+
+  .barValue {
+    width: 6px;
+  }
+
   .barLabel {
-    font-size: 12px;
-    color: #666;
+    font-size: 11px;
   }
-  
-  
+}
+
+@media (max-width: 480px) {
+  .chart {
+    height: 160px;
+    gap: 8px;
+  }
+
+  .barValue {
+    width: 5px;
+  }
+
+  .barLabel {
+    font-size: 10px;
+  }
+
+  .legend {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

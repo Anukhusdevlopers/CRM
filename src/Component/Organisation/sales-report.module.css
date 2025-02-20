@@ -1,65 +1,153 @@
 .container {
-    background: white;
-    border: 1px solid #eee;
-    border-radius: 16px;
-    padding: 24px;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
-  }
-  
-  .header h3 {
-    margin: 0;
-    font-size: 16px;
-  }
-  
-  .moreButton {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 4px 8px;
-  }
-  
-  .chart {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .bar {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.moreButton {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.moreButton:hover {
+  color: #000;
+}
+
+/* Chart */
+.chart {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Bar Container */
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Labels */
+.barLabel {
+  width: 140px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Progress Track */
+.barTrack {
+  flex: 1;
+  height: 10px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Progress Bar */
+.barValue {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.4s ease-in-out;
+}
+
+/* Amount */
+.barAmount {
+  font-size: 14px;
+  color: #666;
+  min-width: 50px;
+  text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .barLabel {
     width: 120px;
-    font-size: 14px;
+    font-size: 13px;
   }
-  
-  .barTrack {
-    flex: 1;
-    height: 8px;
-    background: #f5f5f5;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  
-  .barValue {
-    height: 100%;
-    border-radius: 4px;
-    transition: width 0.3s ease;
-  }
-  
+
   .barAmount {
-    font-size: 14px;
-    color: #666;
-    width: 60px;
+    font-size: 13px;
   }
-  
-  
+
+  .barTrack {
+    height: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chart {
+    gap: 12px;
+  }
+
+  .bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .barLabel {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .barAmount {
+    font-size: 12px;
+  }
+
+  .barTrack {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 16px;
+  }
+
+  .header h3 {
+    font-size: 14px;
+  }
+
+  .moreButton {
+    font-size: 18px;
+  }
+
+  .bar {
+    gap: 8px;
+  }
+
+  .barLabel {
+    font-size: 11px;
+  }
+
+  .barAmount {
+    font-size: 11px;
+  }
+}

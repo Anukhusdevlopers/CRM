@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Input.module.css';
 
-export default function Input({ placeholder, label, customStyles, onChange }) {
-  const [value, setValue] = useState("");
-
+export default function Input({ placeholder, label, customStyles, onChange, name, value }) {
   const inputId = label ? label.toLowerCase().replace(/\s+/g, '-') : 'input';
 
   return (
@@ -15,8 +13,9 @@ export default function Input({ placeholder, label, customStyles, onChange }) {
         style={customStyles}
         placeholder={placeholder || ""}
         type="text"
+        name={name} // Ensure name is passed for proper form handling
         onChange={onChange}
-        value={value}
+        value={value} // Controlled input: value comes from props
       />
     </div>
   );

@@ -5,10 +5,9 @@
 }
 
 .label {
-    margin-bottom: 5px;
     font-weight: bold;
     color: #333;
-    font-family: sans-serif;
+    font-family: "Niramit-Regular";
     font-weight: 400;
     font-size: 13px;
 }

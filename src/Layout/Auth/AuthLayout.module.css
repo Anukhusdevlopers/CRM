@@ -1,20 +1,39 @@
-.layout{
+.layout {
     display: flex;
     height: 100vh;
     width: 100vw;
     padding: 20px 50px;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
-.right{
-    flex: 1;
-    border-radius: 15px;
-    background: #3333331d;
-}
-.left
-{
+/* Left section (always visible) */
+.left {
     flex: 1;
     border-radius: 15px;
     display: flex;
-    
+}
+
+/* Right section (hidden on small screens) */
+.right {
+    flex: 1;
+    border-radius: 15px;
+    max-height: 100%;
+    background: #3333331d;
+}
+
+/* Hide the right div on screens smaller than 768px */
+@media (max-width: 768px) {
+    .right {
+        display: none;
+    }
+
+    .left {
+        width: 100%; /* Make the left div take full width */
+    }
+}
+@media (max-width: 480px) {
+    .layout {
+        padding: 20px 20px;
+    }
 }

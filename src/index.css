@@ -25,3 +25,8 @@ body {
   font-family: 'Ysabeau' ;
   src: url(../src/assets/Fonts/Ysabeau-Medium.ttf);
 }
+
+@font-face {
+  font-family: 'Niramit-Regular' ;
+  src: url(../src/assets/Fonts/Niramit-Regular.ttf);
+}

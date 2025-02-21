@@ -1,0 +1,13 @@
+.container div{
+    display: flex;
+    gap: 5px;
+    margin-top: 7px;
+}
+h3{
+    margin-top: 10px;
+}
+    
+.title{
+    font-size: 25px;
+    margin-top: 50px;
+}

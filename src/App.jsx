@@ -10,6 +10,12 @@ import Pricing from "./Pages/home/pricing";
 import Blog from "./Pages/home/blog";
 import Company from "./Pages/home/company";
 import Dashboard from "./Pages/organisation/Dashboard";
+import AuthLayout from "./Layout/Auth/AuthLayout";
+import Login from "./Pages/auth/Login";
+import OrganisationLogin from "./Component/Auth/OrganisationLogin";
+import EmployeeLogin from "./Component/Auth/EmployeeLogin";
+import OrganisationSignup from "./Component/Auth/OrganisationSignup";
+import Signup from "./Pages/auth/Signup";
 const App = () => {
   // lenis
   useEffect(() => {
@@ -37,6 +43,18 @@ const App = () => {
           <Route path="/organisation" element={<OrganisationLayout />}>
             <Route path="dashboard" element={<Dashboard /> } />
           </Route>
+
+          {/* auth */}
+          <Route path="/auth" element={<AuthLayout />}>
+            <Route path="login" element={<Login />} >
+              <Route path="organisation" element={<OrganisationLogin />} />
+              <Route path="employee" element={<EmployeeLogin />} />
+            </Route>
+            <Route path="signup" element={<Signup  />} >
+              <Route path="organisation" element={<OrganisationSignup />} />
+            </Route>
+          </Route>
+
         </Routes>
       </BrowserRouter>
     </>

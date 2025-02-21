@@ -1,0 +1,38 @@
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .button {
+    background: linear-gradient(135deg, #4A90E2, #007AFF);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    flex: 1;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .button:hover {
+    background: linear-gradient(135deg, #007AFF, #4A90E2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.8);
+  }
+  

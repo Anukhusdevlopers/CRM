@@ -1,0 +1,25 @@
+.container div{
+    display: flex;
+    gap: 5px;
+    margin-top: 7px;
+}
+h3{
+    margin-top: 10px;
+}
+.name
+{
+    padding-top: 25px;;
+}
+.policy{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+} 
+.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    font-size: 25px;
+}

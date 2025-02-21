@@ -1,0 +1,28 @@
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Makes container take full width */
+}
+
+.label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.input {
+    width: 100%; /* Ensures input takes full width */
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #3333331d;
+    transition: box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.input:focus {
+    outline: none;
+    border: 1px solid #3333331d;
+    box-shadow: 0 0 8px #3333331d;
+}

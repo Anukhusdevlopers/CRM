@@ -100,14 +100,18 @@ const Navbar = () => {
             <TypesEOrO
               title="Login as:"
               button1="Organisation"
-              button2="Employee"
+              link1={"/"}
+              link2={"/"}
               onClose={() => setLoginPopUp(false)}
+              button2="Employee"
             />
           )}
 
           {signupPopUp && (
             <TypesEOrO
               title="Sign up as:"
+              link1={"/"}
+              link2={"/"}
               button1="Organisation"
               button2="Employee"
               onClose={() => setSignupPopUp(false)}

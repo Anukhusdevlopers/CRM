@@ -3,12 +3,12 @@ import styles from "./sidebar.module.css";
 
 const OrganisationSidebar = () => {
   const menuItems = [
-    { icon: "📊", label: "Overview", href: "/" },
-    { icon: "📈", label: "Statistics", href: "/statistics" },
-    { icon: "👥", label: "Customers", href: "/customers" },
-    { icon: "📦", label: "Product", href: "/product" },
-    { icon: "💬", label: "Messages", href: "/messages", badge: "11" },
-    { icon: "💳", label: "Transactions", href: "/transactions" },
+    { label: "Dashboard", href: "/dashboard" },
+    { label: "Employees", href: "/employees" },
+    { label: "Revenue (lead)", href: "/revenue" },
+    { label: "Lead Panel", href: "/lead-panel" },
+    { label: "Messages", href: "/messages" },
+    { label: "Campaigns", href: "/campaigns" },
   ];
 
   const generalItems = [

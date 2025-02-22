@@ -55,6 +55,8 @@
   width: 20px;
   height: 20px;
   display: flex;
+  background: rgba(51, 153, 75, 0.248);
+  border-radius: 50px;
   align-items: center;
   justify-content: center;
 }

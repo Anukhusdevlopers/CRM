@@ -16,6 +16,11 @@ import OrganisationLogin from "./Component/Auth/OrganisationLogin";
 import EmployeeLogin from "./Component/Auth/EmployeeLogin";
 import OrganisationSignup from "./Component/Auth/OrganisationSignup";
 import Signup from "./Pages/auth/Signup";
+import Employees from "./Pages/organisation/Employees";
+import Revenue from "./Pages/organisation/Revenue";
+import LeadPanel from "./Pages/organisation/LeadPanel";
+import Messages from "./Pages/organisation/Messages";
+import Campaigns from "./Pages/organisation/Campaigns";
 const App = () => {
   // lenis
   useEffect(() => {
@@ -42,6 +47,11 @@ const App = () => {
           {/* organisation */}
           <Route path="/organisation" element={<OrganisationLayout />}>
             <Route path="dashboard" element={<Dashboard /> } />
+            <Route path="employees" element={<Employees /> } />
+            <Route path="revenue" element={<Revenue /> } />
+            <Route path="lead-panel" element={<LeadPanel /> } />
+            <Route path="Messages" element={<Messages /> } />
+            <Route path="campaigns" element={<Campaigns /> } />
           </Route>
 
           {/* auth */}

@@ -3,17 +3,17 @@ import styles from "./sidebar.module.css";
 
 const OrganisationSidebar = () => {
   const menuItems = [
-    { label: "Dashboard", href: "/dashboard" },
-    { label: "Employees", href: "/employees" },
-    { label: "Revenue (lead)", href: "/revenue" },
-    { label: "Lead Panel", href: "/lead-panel" },
-    { label: "Messages", href: "/messages" },
-    { label: "Campaigns", href: "/campaigns" },
+    { label: "Dashboard", to: "/organisation/dashboard" },
+    { label: "Employees", to: "/organisation/employees" },
+    { label: "Revenue (lead)", to: "/organisation/revenue" },
+    { label: "Lead Panel", to: "/organisation/lead-panel" },
+    { label: "Messages", to: "/organisation/messages" },
+    { label: "Campaigns", to: "/organisation/campaigns" },
   ];
 
   const generalItems = [
-    { icon: "⚙️", label: "Settings", href: "/settings" },
-    { icon: "🔒", label: "Security", href: "/security" },
+    { icon: "⚙️", label: "Settings", to: "/organisation/settings" },
+    { icon: "🔒", label: "Security", to: "/organisation/security" },
   ];
 
   return (
@@ -29,7 +29,7 @@ const OrganisationSidebar = () => {
           <ul>
             {menuItems.map((item) => (
               <li key={item.label}>
-                <Link href={item.href} className={styles.menuItem}>
+                <Link to={item.to} className={styles.menuItem}>
                   <span className={styles.icon}>{item.icon}</span>
                   <span>{item.label}</span>
                   {item.badge && <span className={styles.badge}>{item.badge}</span>}
@@ -44,7 +44,7 @@ const OrganisationSidebar = () => {
           <ul>
             {generalItems.map((item) => (
               <li key={item.label}>
-                <Link href={item.href} className={styles.menuItem}>
+                <Link to={item.to} className={styles.menuItem}>
                   <span className={styles.icon}>{item.icon}</span>
                   <span>{item.label}</span>
                 </Link>

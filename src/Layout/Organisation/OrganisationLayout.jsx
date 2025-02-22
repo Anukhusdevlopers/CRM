@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import OrganisationSideBar from "./sidebar/sidebar";
 import styles from './OrganisationLayout.module.css';
+import Header from "./sidebar/header";
 
 export default function OrganisationLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -39,6 +40,7 @@ export default function OrganisationLayout() {
 
       {/* Main Content */}
       <div className={styles.outlet} onClick={() => setIsSidebarOpen(false)}>
+        <Header />
         <Outlet />
       </div>
     </div>

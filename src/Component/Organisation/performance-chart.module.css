@@ -49,11 +49,9 @@
 
 .progress {
   fill: none;
-  stroke: #4caf50;
   stroke-width: 10;
-  stroke-dasharray: 251.2;
-  stroke-dashoffset: calc(251.2 - (251.2 * var(--percent)) / 100);
   transition: stroke-dashoffset 0.5s ease-in-out;
+  stroke-linecap: round;
 }
 
 /* Center Text */
@@ -123,12 +121,6 @@
 
   .label {
     font-size: 13px;
-  }
-}
-
-@media (max-width: 1230px) {
-  .chart {
-    flex-direction: column;
   }
 }
 

@@ -1,20 +1,18 @@
+import React from "react";
 import styles from "./sales-report.module.css";
 
-export const SalesReport = () => {
-  const data = [
-    { label: "Product Launched", value: 233, color: "#4CAF50" },
-    { label: "Ongoing Product", value: 123, color: "#2196F3" },
-    { label: "Product Sold", value: 482, color: "#FFA726" },
-  ];
-
+export const SalesReport = ({ data }) => {
   const maxValue = Math.max(...data.map((d) => d.value));
 
   return (
     <div className={styles.container}>
+      {/* Header */}
       <div className={styles.header}>
         <h3>Sales Report</h3>
         <button className={styles.moreButton}>⋮</button>
       </div>
+
+      {/* Chart */}
       <div className={styles.chart}>
         {data.map((item, index) => (
           <div key={index} className={styles.bar}>
@@ -35,4 +33,3 @@ export const SalesReport = () => {
     </div>
   );
 };
-

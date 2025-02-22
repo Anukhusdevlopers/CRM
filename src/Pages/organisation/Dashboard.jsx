@@ -6,6 +6,62 @@ import { SalesReport } from "../../Component/Organisation/sales-report.jsx";
 import { PerformanceChart } from "../../Component/Organisation/performance-chart.jsx";
 
 const Dashboard = () => {
+
+
+  const dashboardData = {
+    metric: {
+      update: {
+        date: "Feb 12th 2024",
+        message: "Sales revenue increased 40% in 1 week",
+        link: "See Statistics",
+      },
+      netIncome: {
+        amount: 193000,
+        change: "+35%",
+        direction: "up",
+      },
+      totalReturn: {
+        amount: 32000,
+        change: "-24%",
+        direction: "down",
+      },
+    },
+    transactions: [
+      { id: 1, item: "Premium T-Shirt", status: "Completed", date: "Jul 12th 2024", ref: "QJWEJ57SNC", icon: "👕" },
+      { id: 2, item: "PlayStation 5", status: "Pending", date: "Jul 12th 2024", ref: "QJWEJ57SNC", icon: "🎮" },
+      { id: 3, item: "Hoodie Gombrong", status: "Pending", date: "Jul 12th 2024", ref: "QJWEJ57SNC", icon: "🧥" },
+      { id: 4, item: "iPhone 15 Pro Max", status: "Completed", date: "Jul 12th 2024", ref: "QJWEJ57SNC", icon: "📱" },
+      { id: 5, item: "Lotse", status: "Completed", date: "Jul 12th 2024", ref: "QJWEJ57SNC", icon: "📦" },
+      { id: 6, item: "Starbucks", status: "Completed", date: "Jul 12th 2024", ref: "QJWEJ57SNC", icon: "☕" },
+      { id: 7, item: "Tinek Destar T-Shirt", status: "Completed", date: "Jul 12th 2024", ref: "QJWEJ57SNC", icon: "👚" },
+    ],
+    revenue:  [
+      { month: "Jan", income: 12000, expenses: 8000 },
+      { month: "Feb", income: 15000, expenses: 9000 },
+      { month: "Mar", income: 14000, expenses: 9500 },
+      { month: "Apr", income: 18000, expenses: 12000 },
+      { month: "May", income: 22000, expenses: 14000 },
+      { month: "Jun", income: 25000, expenses: 16000 },
+    ],
+    salesReport: [
+      { label: "Electronics", value: 120000, color: "#4CAF50" },
+      { label: "Furniture", value: 95000, color: "#FF9800" },
+      { label: "Clothing", value: 78000, color: "#2196F3" },
+      { label: "Books", value: 45000, color: "#9C27B0" },
+      { label: "Accessories", value: 60000, color: "#E91E63" },
+    ],
+    analytics: {
+      totalCount: 565000,
+      breakdown: {
+        viewCount: "57%",
+        percentage: "33%",
+        sales: "10%",
+      },
+    },
+  };
+  
+ 
+
   return (
     <main className={styles.main}>
       <header className={styles.header}>
@@ -42,14 +98,14 @@ const Dashboard = () => {
 
         <div className={styles.grid}>
           <div className={styles.leftColumn}>
-            <MetricsCards />
-            <TransactionList />
+            <MetricsCards data={dashboardData.metric} />
+            <TransactionList data={dashboardData.transactions} />
           </div>
           <div className={styles.rightColumn}>
-            <PerformanceChart />
+            <PerformanceChart data={dashboardData.analytics} />
             <div className={styles.charts}>
-              <RevenueChart />
-              <SalesReport />
+              <RevenueChart data={dashboardData.revenue} />
+              <SalesReport data={dashboardData.salesReport} />
             </div>
           </div>
         </div>

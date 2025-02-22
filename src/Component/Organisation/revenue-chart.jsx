@@ -1,13 +1,6 @@
 import styles from "./revenue-chart.module.css";
 
-export const RevenueChart = () => {
-  const data = [
-    { month: "Jan", income: 180000, expenses: 120000 },
-    { month: "Feb", income: 150000, expenses: 110000 },
-    { month: "Mar", income: 200000, expenses: 130000 },
-    { month: "Apr", income: 170000, expenses: 120000 },
-    { month: "May", income: 190000, expenses: 140000 },
-  ];
+export const RevenueChart = ({data}) => {
 
   const maxValue = Math.max(...data.flatMap((d) => [d.income, d.expenses]));
 

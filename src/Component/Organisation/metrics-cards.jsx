@@ -1,31 +1,49 @@
 import styles from "./metrics-cards.module.css";
 
-export const MetricsCards = () => {
+export const MetricsCards = ({ data }) => {
+  if (!data) return <p>Loading...</p>;
+
+  const { update, netIncome, totalReturn } = data;
+
   return (
     <div className={styles.metrics}>
+      {/* Update Section */}
       <div className={styles.updateCard}>
         <span className={styles.label}>Update</span>
-        <p className={styles.date}>Feb 12th 2024</p>
-        <h3>Sales revenue increased 40% in 1 week</h3>
+        <p className={styles.date}>{update.date}</p>
+        <h3>{update.message}</h3>
         <a href="/statistics" className={styles.link}>
-          See Statistics →
+          {update.link} →
         </a>
       </div>
 
+      {/* Metrics Grid */}
       <div className={styles.metricsGrid}>
-        <div className={styles.card}>
-          <h3>Net Income</h3>
-          <div className={styles.amount}>$193,000</div>
-          <div className={`${styles.change} ${styles.positive}`}>+35% from last month</div>
-        </div>
+        <MetricCard
+          title="Net Income"
+          amount={netIncome.amount}
+          change={netIncome.change}
+          isPositive={netIncome.direction === "up"}
+        />
 
-        <div className={styles.card}>
-          <h3>Total Return</h3>
-          <div className={styles.amount}>$32,000</div>
-          <div className={`${styles.change} ${styles.negative}`}>-24% from last month</div>
-        </div>
+        <MetricCard
+          title="Total Return"
+          amount={totalReturn.amount}
+          change={totalReturn.change}
+          isPositive={totalReturn.direction === "up"}
+        />
       </div>
     </div>
   );
 };
 
+// Reusable Metric Card Component
+const MetricCard = ({ title, amount, change, isPositive }) => (
+  <div className={styles.card}>
+    <h3>{title}</h3>
+    <div className={styles.amount}>${amount.toLocaleString()}</div>
+    <div className={`${styles.change} ${isPositive ? styles.positive : styles.negative}`}>
+      {change} from last month
+    </div>
+  </div>
+);

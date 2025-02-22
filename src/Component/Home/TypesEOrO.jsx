@@ -1,28 +1,31 @@
 import { Link } from "react-router-dom";
 import "./TypesEOrO.css";
 
-export default function TypesEOrO({ styles, title, button1, button2, handleButton1, handleButton2, link1, link2 }) {
+export default function TypesEOrO({
+  styles,
+  title,
+  link1Text,
+  link1title,
+  link2title,
+  link1,
+  link2Text,
+  link2,
+}) {
   return (
-    <div style={styles} className="types container">
+    <div style={styles} className="login-container">
       <h3>{title}</h3>
+      <div className="section">
+        <h4>{link1title}</h4>
+        <Link to={link1} className="login-link">
+          {link1Text} <span className="icon"></span>
+        </Link>
+        <hr />
+        <h4>{link2title}</h4>
 
-      {button1 && (
-        <button onClick={handleButton1} className="button-1">
-          <Link style={{ color: "#fff" }} to={link1}>
-            {button1}
-          </Link>
-        </button>
-      )}
-
-      {button1 && button2 && <span>Or</span>}
-
-      {button2 && (
-        <button onClick={handleButton2} className="button-2">
-          <Link style={{ color: "#000" }} to={link2}>
-            {button2}
-          </Link>
-        </button>
-      )}
+        <Link to={link2} className="login-link">
+          {link2Text}
+        </Link>
+      </div>
     </div>
   );
 }

@@ -12,21 +12,26 @@ const Navbar = () => {
 
   const handleToggle = () => setToggle((prev) => !prev);
 
+  // Toggle login popup when clicking the login button
   const handleLoginClick = (e) => {
     e.preventDefault();
-    setToggle(false);
+    setToggle(false); 
     setLoginPopUp((prev) => !prev);
   };
 
   const handleSignupClick = (e) => {
     e.preventDefault();
-    navigate("/auth/signup/organisation"); // Redirect directly
+    navigate("/auth/signup/organisation");
   };
 
   // Close the popup when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (popupRef.current && !popupRef.current.contains(event.target)) {
+      if (
+        popupRef.current &&
+        !popupRef.current.contains(event.target) &&
+        event.target.id !== "login-button"
+      ) {
         setLoginPopUp(false);
       }
     };
@@ -63,6 +68,7 @@ const Navbar = () => {
 
           <div className="right-part">
             <button
+              id="login-button"
               className="trigger-button"
               style={{
                 background: "#fff",
@@ -89,14 +95,15 @@ const Navbar = () => {
 
       {/* Login Popup */}
       {loginPopUp && (
-        <div ref={popupRef}>
+        <div ref={popupRef} className="login-popup">
           <TypesEOrO
-            title="Login as:"
-            button1="Organisation"
+            link1title="Organisation"
+            link2title="Employee"
+            title="Login"
+            link1Text="Login as Organisation"
             link1="/auth/login/organisation"
+            link2Text="Login as Employee"
             link2="/auth/login/employee"
-            onClose={() => setLoginPopUp(false)}
-            button2="Employee"
           />
         </div>
       )}

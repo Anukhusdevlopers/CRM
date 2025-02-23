@@ -7,7 +7,7 @@ import { PerformanceChart } from "../../Component/Organisation/performance-chart
 
 const Dashboard = () => {
 
-
+ 
   const dashboardData = {
     metric: {
       update: {

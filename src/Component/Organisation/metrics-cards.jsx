@@ -9,7 +9,7 @@ export const MetricsCards = ({ data }) => {
     <div className={styles.metrics}>
       {/* Update Section */}
       <div className={styles.updateCard}>
-        <span className={styles.label}>Update</span>
+        <span className={styles.label}>Update</span>  
         <p className={styles.date}>{update.date}</p>
         <h3>{update.message}</h3>
         <a href="/statistics" className={styles.link}>

@@ -1,18 +1,44 @@
-.container div{
+
+.container {
     display: flex;
-    gap: 5px;
-    margin-top: 7px;
-}
-h3{
-    margin-top: 10px;
-}
-.login{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    margin: auto;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
 }
 
-.title{
-    font-size: 25px;
-    margin-top: 50px;
+h3 {
+    margin-top: 10px;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 11px;
+    margin-top: 3px;
+    font-family: sans-serif;
+}
+
+.inputError {
+    border: 1px solid red !important;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 15px;
+    }
 }

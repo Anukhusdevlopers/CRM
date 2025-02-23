@@ -1,14 +1,19 @@
 import React, { useState } from "react";
-// import Select from "../Common/Select"; // Import Select component
 import styles from "./OrganisationSignup.module.css";
 import Button from "../Common/Button";
 import { Link } from "react-router-dom";
 import Input from "../Common/Input";
-import { countryOptions, commonJobs, commonCompanies, employeeRanges } from "../../constants";
+import {
+  countryOptions,
+  commonJobs,
+  commonCompanies,
+  employeeRanges,
+} from "../../constants";
 import ActionSearchBar from "../Common/ActionSearchBar";
 
 export default function OrganisationSignup() {
-  const [form, setForm] = useState({
+
+  const initialFormState = {
     name: { firstname: "", lastname: "" },
     contact: { phone: "", country: "" },
     email: "",
@@ -16,7 +21,9 @@ export default function OrganisationSignup() {
     company: "",
     employees: "",
     policy: false,
-  });
+  }
+
+  const [form, setForm] = useState(initialFormState);
 
   const [errors, setErrors] = useState({
     firstname: "",
@@ -56,7 +63,7 @@ export default function OrganisationSignup() {
   };
 
   const onChange = (e) => {
-    const { name, value, type, checked } = e.target || {}; // Handling both input and select elements
+    const { name, value, type, checked } = e.target || {};
 
     if (name.includes(".")) {
       const [parent, child] = name.split(".");
@@ -79,12 +86,16 @@ export default function OrganisationSignup() {
     form.name.firstname.trim() &&
     form.name.lastname.trim() &&
     form.contact.phone.trim() &&
-    form.email.trim();
+    form.email.trim() &&
+    form.policy;
 
   const onClick = () => {
     if (isFormValid()) {
       console.log("Form Data:", form);
+      setForm(initialFormState);
     } else {
+
+      alert("incomplete form or unchecked policy");
       console.log("Form has errors. Please correct them.");
     }
   };
@@ -93,7 +104,7 @@ export default function OrganisationSignup() {
     <div className={styles.container}>
       <h3 className={styles.title}>Create Organisation Account</h3>
 
-      {/* Firstname & Lastname in one line */}
+      {/* Firstname & Lastname */}
       <div className={styles.row}>
         <div className={styles.inputWrapper}>
           <Input
@@ -135,7 +146,7 @@ export default function OrganisationSignup() {
         {errors.email && <p className={styles.error}>{errors.email}</p>}
       </div>
 
-      {/* Phone & Country in one line */}
+      {/* Phone & Country */}
       <div className={styles.row}>
         <div className={styles.inputWrapper}>
           <Input
@@ -150,39 +161,20 @@ export default function OrganisationSignup() {
         </div>
 
         <div className={styles.inputWrapper}>
-          {/* <Select
-            label="Country"
-            name="contact.country"
-            options={countryOptions}
-            value={form.contact.country}
-            onChange={(e) =>
-              onChange({
-                target: { name: "contact.country", value: e.target.value },
-              })
-            }
-          /> */}
           <ActionSearchBar
             allActions={countryOptions}
-            label={"Country"}
+            label="Country"
             onChange={(selectedCountry) =>
               onChange({
                 target: { name: "contact.country", value: selectedCountry },
               })
             }
           />
-
-          {console.log(form)}
         </div>
       </div>
 
       {/* Job Title */}
       <div>
-        {/* <Input
-          label="Job Title"
-          name="jobTitle"
-          value={form.jobTitle}
-          onChange={onChange}
-        /> */}
         <ActionSearchBar
           label="Job Title"
           allActions={commonJobs}
@@ -196,12 +188,6 @@ export default function OrganisationSignup() {
 
       {/* Company & Employees */}
       <div className={styles.row}>
-        {/* <Input
-          label="Company"
-          name="company"
-          value={form.company}
-          onChange={onChange}
-        /> */}
         <ActionSearchBar
           label="Company"
           allActions={commonCompanies}
@@ -211,19 +197,13 @@ export default function OrganisationSignup() {
             })
           }
         />
-        {/* <Input
-          label="Employees"
-          name="employees"
-          value={form.employees}
-          onChange={onChange}
-        /> */}
 
         <ActionSearchBar
-          label="Emplloyees"
+          label="Employees"
           allActions={employeeRanges}
           onChange={(range) =>
             onChange({
-              target: { name: "employee", value: range },
+              target: { name: "employees", value: range },
             })
           }
         />
@@ -248,7 +228,7 @@ export default function OrganisationSignup() {
           type="submit"
           text="Create Account"
           onClick={onClick}
-          disabled={!isFormValid()}
+          disabled={!isFormValid()} // ✅ Button is disabled until checkbox is checked
         />
       </div>
 

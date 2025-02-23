@@ -1,0 +1,96 @@
+.selectContainer {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+  }
+  .custom-select {
+    height: 50px;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  .custom-select option {
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  .select {
+    width: 100%;
+    padding: 8px 16px;
+    padding-right: 40px;
+    appearance: none;
+    background-color: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #1a202c;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .select:hover {
+    border-color: #cbd5e0;
+  }
+  
+  .select:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+  }
+  
+  .selectWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .selectIcon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .select:focus + .selectIcon {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  
+  .label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4a5568;
+  }
+  
+  .option {
+    padding: 8px 16px;
+  }
+  
+  /* Error state */
+  .error {
+    border-color: #fc8181;
+  }
+  
+  .error:focus {
+    border-color: #fc8181;
+    box-shadow: 0 0 0 3px rgba(252, 129, 129, 0.15);
+  }
+  
+  .errorMessage {
+    margin-top: 4px;
+    color: #e53e3e;
+    font-size: 0.875rem;
+  }

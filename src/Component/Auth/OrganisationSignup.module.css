@@ -1,32 +1,54 @@
-.container div{
+.container {
     display: flex;
-    gap: 5px;
-    margin-top: 7px;
+    flex-direction: column;
+    gap: 15px;
+    margin: auto;
 }
-h3{
+
+h3 {
     margin-top: 10px;
 }
-.name
-{
-    padding-top: 25px;;
+
+.row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
 }
-.policy{
-    padding-top: 10px;
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.error {
+    color: red;
+    font-size: 11px;
+    margin-top: 3px ;
+    font-family: sans-serif;
+}
+
+
+.inputError {
+    border: 1px solid red !important;
+}
+
+.policy {
     display: flex;
     align-items: center;
-} 
-.login{
+    gap: 8px;
+}
+
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.title{
-    font-size: 25px;
+    margin-top: 10px;
 }
 
+/* Responsive design */
 @media (max-width: 360px) {
-    .name,.contact{
+    .row {
         flex-direction: column;
     }
-    
 }

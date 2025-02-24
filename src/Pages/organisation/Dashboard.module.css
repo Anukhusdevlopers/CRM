@@ -3,7 +3,6 @@
   flex: 1;
   background: #fff;
   min-height: 100vh;
-  font-family: sans-serif;
   padding: 16px;
 }
 
@@ -22,7 +21,8 @@
 }
 
 .dashboardHeader h2 {
-  font-size: 24px;
+  font-size: 30px;
+  font-family: "Lato-Bold", sans-serif;
   margin-bottom: 8px;
 }
 

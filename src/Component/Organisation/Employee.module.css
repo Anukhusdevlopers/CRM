@@ -1,0 +1,40 @@
+.container{
+    margin-top: 20px;
+    border: 1px solid #3333331d;
+    min-height: 130px;
+    padding: 15px;
+    flex: 1;
+    border-radius: 8px;
+} 
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.threedots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+.dot{
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background: #333333a2;
+}
+
+.body{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;    
+}
+.body div{
+    width: 100px;
+    height: 25px;
+    border-radius: 50px;
+    background: #3333331d;
+
+}

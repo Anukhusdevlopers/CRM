@@ -1,0 +1,83 @@
+.leadpanel{
+    padding: 30px 50px;;
+}
+
+ .head{
+    display: flex;
+}
+ .left{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+ .left h2{
+    font-size: 30px;
+}
+ .left .icon{
+    width: 100px;
+    height: 30px;
+    background: #3333331d;
+    border-radius: 50px;
+}
+.right{
+    display: flex;
+    gap: 15px;
+    margin: 0 10px;
+    align-items: center;
+}
+.right button{
+    padding: 10px 20px;
+    font-weight: 500;
+    background: transparent;
+    border-radius: 10px;
+    color: #0A3B2C;
+    border: 2px solid #0A3B2C;
+}
+.right button:nth-child(1){
+    background: #0A3B2C;
+    color: #fff;
+    border: none;
+}
+
+.right .icon{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background: #3333331d;
+}
+
+.total{
+    display: flex;
+}
+.total .estimate{
+    flex: 1;
+}
+
+.total .customerAndEmployee{
+    flex: 1;
+    display: flex;
+    padding: 0 15px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1120px) {
+    .total{
+        flex-direction: column;
+    }
+    .total .customerAndEmployee{
+        padding: 0;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .total .customerAndEmployee{
+        flex-direction: column;
+    }
+    .leadpanel{
+        padding: 30px 10px;
+    }
+}

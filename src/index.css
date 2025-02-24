@@ -30,3 +30,43 @@ body {
   font-family: 'Niramit-Regular' ;
   src: url(../src/assets/Fonts/Niramit-Regular.ttf);
 }
+
+@font-face {
+  font-family: 'Poppins-Regular' ;
+  src: url(../src/assets/Fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Poppins-Bold' ;
+  src: url(../src/assets/Fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Poppins-Medium' ;
+  src: url(../src/assets/Fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Poppins-Black' ;
+  src: url(../src/assets/Fonts/Poppins-Black.ttf);
+}
+
+@font-face {
+  font-family: 'Lato-Regular' ;
+  src: url(../src/assets/Fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Lato-Bold' ;
+  src: url(../src/assets/Fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Merriweather-Regular' ;
+  src: url(../src/assets/Fonts/Merriweather-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Merriweather-Bold' ;
+  src: url(../src/assets/Fonts/Merriweather-Bold.ttf);
+}

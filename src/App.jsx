@@ -23,14 +23,14 @@ import Messages from "./Pages/organisation/Messages";
 import Campaigns from "./Pages/organisation/Campaigns";
 const App = () => {
   // lenis
-  useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-  });
+  // useEffect(() => {
+  //   const lenis = new Lenis();
+  //   function raf(time) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+  //   requestAnimationFrame(raf);
+  // });
 
   return (
     <>

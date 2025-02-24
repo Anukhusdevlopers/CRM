@@ -354,3 +354,39 @@ export const employeeRanges = [
   { id: 6, label: "1000-2000" },
   { id: 7, label: "2000+" }
 ];
+export function generateStaticDummyData() {
+  return [
+    { name: "Olivia Anderson", email: "olivia@gmail.com", company: "Anderson Corp", status: "Accepted", value: "$1200", time: "Today at 14:50PM" },
+    { name: "Benjamin Ramirez", email: "benjamin@gmail.com", company: "Ramirez Corp", status: "Pending", value: "$3100", time: "Today at 11:43AM" },
+    { name: "Sophia Mitchell", email: "sophia@gmail.com", company: "Mitchell Corp", status: "Canceled", value: "$7800", time: "Today at 09:10AM" },
+    { name: "Liam Walker", email: "liam@gmail.com", company: "Walker Corp", status: "Accepted", value: "$5300", time: "Today at 08:24AM" },
+    { name: "Ava Bennett", email: "ava@gmail.com", company: "Bennett Corp", status: "Pending", value: "$4200", time: "Yesterday at 23:50PM" },
+    { name: "Mason Collins", email: "mason@gmail.com", company: "Collins Corp", status: "Accepted", value: "$2300", time: "Yesterday at 20:11PM" },
+    { name: "Ethan Scott", email: "ethan@gmail.com", company: "Scott Corp", status: "Canceled", value: "$9100", time: "Yesterday at 16:45PM" },
+    { name: "Emma Johnson", email: "emma@gmail.com", company: "Johnson Corp", status: "Accepted", value: "$1100", time: "Yesterday at 10:30AM" },
+    { name: "Noah White", email: "noah@gmail.com", company: "White Corp", status: "Pending", value: "$6500", time: "Yesterday at 08:20AM" },
+    { name: "Isabella Lewis", email: "isabella@gmail.com", company: "Lewis Corp", status: "Accepted", value: "$7600", time: "Yesterday at 07:15AM" },
+
+    { name: "Daniel Carter", email: "daniel@gmail.com", company: "Carter Corp", status: "Accepted", value: "$5400", time: "Today at 12:30PM" },
+    { name: "Emily Hall", email: "emily@gmail.com", company: "Hall Corp", status: "Pending", value: "$4300", time: "Today at 10:15AM" },
+    { name: "Michael Parker", email: "michael@gmail.com", company: "Parker Corp", status: "Canceled", value: "$6200", time: "Yesterday at 21:40PM" },
+    { name: "Sophia Turner", email: "sophia.t@gmail.com", company: "Turner Corp", status: "Accepted", value: "$8700", time: "Yesterday at 18:10PM" },
+    { name: "Jacob Hernandez", email: "jacob@gmail.com", company: "Hernandez Corp", status: "Pending", value: "$9200", time: "Today at 15:20PM" },
+    { name: "Isla Wright", email: "isla@gmail.com", company: "Wright Corp", status: "Accepted", value: "$3300", time: "Today at 13:50PM" },
+    { name: "William Adams", email: "william@gmail.com", company: "Adams Corp", status: "Canceled", value: "$1400", time: "Yesterday at 11:20AM" },
+    { name: "Charlotte Baker", email: "charlotte@gmail.com", company: "Baker Corp", status: "Pending", value: "$7500", time: "Yesterday at 09:45AM" },
+    { name: "Elijah Campbell", email: "elijah@gmail.com", company: "Campbell Corp", status: "Accepted", value: "$2600", time: "Today at 16:30PM" },
+    { name: "Mia Rivera", email: "mia@gmail.com", company: "Rivera Corp", status: "Pending", value: "$5800", time: "Today at 14:10PM" },
+
+    // Add more records here...
+  ].concat(
+    Array.from({ length: 80 }, (_, i) => ({
+      name: `User ${i + 21}`,
+      email: `user${i + 21}@gmail.com`,
+      company: `Company ${i + 21}`,
+      status: ["Accepted", "Pending", "Canceled"][Math.floor(Math.random() * 3)],
+      value: `$${(Math.random() * (15000 - 500) + 500).toFixed(2)}`,
+      time: ["Today at 10:00AM", "Yesterday at 3:00PM", "Yesterday at 8:00AM"][Math.floor(Math.random() * 3)],
+    }))
+  );
+}

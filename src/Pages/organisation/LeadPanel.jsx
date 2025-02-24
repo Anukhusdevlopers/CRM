@@ -1,9 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./LeadPanel.module.css";
 import TotalEstimate from "../../Component/Organisation/TotalEstimate";
 import Customer from "../../Component/Organisation/Customer";
 import Employee from "../../Component/Organisation/Employee";
+import Select from "../../Component/Common/Select";
+import { generateStaticDummyData } from "../../constants/index";
+import Table from "../../Component/Organisation/Table";
+import Grid from "../../Component/Organisation/Grid";
+
 export default function LeadPanel() {
+  const [view, setView] = useState("table"); // Toggle between Table & Grid
+  const [searchQuery, setSearchQuery] = useState(""); // Store search input
+  const [sortBy, setSortBy] = useState(null); // Sorting selection
+
+  const sortOptions = [
+    { value: null, label: "Sort by" },
+    { value: "N-A2Z", label: "Name A-Z" },
+    { value: "N-Z2A", label: "Name Z-A" },
+    { value: "C-A2Z", label: "Company A-Z" },
+    { value: "C-Z2A", label: "Company Z-A" },
+    { value: "V-ASC", label: "Estimate Low to High" }, // Low to High
+    { value: "V-DESC", label: "Estimate High to Low" }, // High to Low
+  ];
+
+  const tableData = generateStaticDummyData();
+
+  // Filter data based on searchQuery (name, email, company)
+  const filteredData = tableData.filter((item) =>
+    Object.values(item).some(
+      (value) =>
+        typeof value === "string" &&
+        value.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  );
+
+  // Sorting logic
+  const sortedData = [...filteredData].sort((a, b) => {
+    if (!sortBy) return 0;
+
+    switch (sortBy) {
+      case "N-A2Z":
+        return a.name.localeCompare(b.name);
+      case "N-Z2A":
+        return b.name.localeCompare(a.name);
+      case "C-A2Z":
+        return a.company.localeCompare(b.company);
+      case "C-Z2A":
+        return b.company.localeCompare(a.company);
+      case "V-ASC":
+        return parseFloat(a.value.replace("$", "")) - parseFloat(b.value.replace("$", ""));
+      case "V-DESC":
+        return parseFloat(b.value.replace("$", "")) - parseFloat(a.value.replace("$", ""));
+      default:
+        return 0;
+    }
+  });
+
   return (
     <div className={styles.leadpanel}>
       <div className={styles.container}>
@@ -15,9 +67,11 @@ export default function LeadPanel() {
           <div className={styles.right}>
             <button>Share</button>
             <button>+ Create New</button>
-            <div className={styles.icon}></div>
-            <div className={styles.icon}></div>
-            <div className={styles.icon}></div>
+            <div className={styles.icons}>
+              <div className={styles.icon}></div>
+              <div className={styles.icon}></div>
+              <div className={styles.icon}></div>
+            </div>
           </div>
         </div>
 
@@ -31,33 +85,62 @@ export default function LeadPanel() {
           </div>
         </div>
 
-        <div className={styles.tables}>
+        <div className={styles.tablecontainer}>
           <div className={styles.tablehead}>
-            <div className={styles.top}>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+            <div className={styles.tabs}>
+              <span className={styles.tab}>
+                <div className={styles.icon}></div> All
+              </span>
+              <span className={styles.tab}>
+                <div className={styles.icon}></div> Company
+              </span>
+              <span className={styles.tab}>
+                <div className={styles.icon}></div> Contact
+              </span>
+              <span className={styles.tab}>
+                <div className={styles.icon}></div> Estimate Value
+              </span>
+              <span className={styles.tab}>
+                <div className={styles.icon}></div> +
+              </span>
             </div>
-            <div className={styles.bottom}>
-              <div>
-                <input type="text" />
-                <span>import</span>
-                <div>
-                  <button></button>
-                  <button></button>
+            <hr />
+            <div className={styles.searchs}>
+              <div className={styles.searchleft}>
+                <div className={styles.search}>
+                  <input
+                    placeholder="Search by Name, Email, or Company"
+                    type="search"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                  />
                 </div>
-                <div>
-                  <select name="" id=""></select>
-                </div>
+                <span>Import</span>
               </div>
-              <div>
-                <button>filter</button>
+              <div className={styles.searchright}>
+                <div className={styles.view}>
+                  <button
+                    className={view === "table" ? styles.active : styles.inactive}
+                    onClick={() => setView("table")}
+                  >
+                    <div className={styles.icon}></div> List
+                  </button>
+                  <button
+                    className={view === "grid" ? styles.active : styles.inactive}
+                    onClick={() => setView("grid")}
+                  >
+                    <div className={styles.icon}></div> Grid
+                  </button>
+                </div>
+                <div>
+                  <Select options={sortOptions} onChange={(e) => setSortBy(e.target.value)} />
+                </div>
               </div>
             </div>
           </div>
-          <div className={styles.tablebody}></div>
+          <div className={styles.tablebody}>
+            {view === "table" ? <Table data={sortedData} /> : <Grid data={sortedData} />}
+          </div>
         </div>
       </div>
     </div>

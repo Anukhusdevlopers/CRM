@@ -22,8 +22,8 @@ th, td {
 }
 
 .emptyCircle {
-  width: 20px;
-  height: 20px;
+  max-width: 20px;  min-width: 20px;
+  max-height: 20px;  min-height: 20px;
   background: #0000001d;
   border-radius: 50%;
   border: 1px solid #ccc;

@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
             <div className={styles.headerLeft}>
-              <h1>Organisation Dashboard</h1>
+              <h1>Organisation</h1>
               <span className={styles.chevron}>▼</span>
             </div>
     

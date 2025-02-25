@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styles from "./LeadPanel.module.css";
 import TotalEstimate from "../../Component/Organisation/TotalEstimate";
-import Customer from "../../Component/Organisation/Customer";
-import Employee from "../../Component/Organisation/Employee";
+import Customer from "../../Component/Organisation/LeadPanel/Customer";
+import Employee from "../../Component/Organisation/LeadPanel/Employee";
 import Select from "../../Component/Common/Select";
 import { generateStaticDummyData } from "../../constants/index";
-import Table from "../../Component/Organisation/Table";
-import Grid from "../../Component/Organisation/Grid";
+import Table from "../../Component/Organisation/LeadPanel/Table";
+import Grid from "../../Component/Organisation/LeadPanel/Grid";
 
 export default function LeadPanel() {
   const [view, setView] = useState("table"); // Toggle between Table & Grid

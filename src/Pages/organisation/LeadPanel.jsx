@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./LeadPanel.module.css";
-import TotalEstimate from "../../Component/Organisation/TotalEstimate";
+import TotalEstimate from "../../Component/Organisation/LeadPanel/TotalEstimate";
 import Customer from "../../Component/Organisation/LeadPanel/Customer";
 import Employee from "../../Component/Organisation/LeadPanel/Employee";
 import Select from "../../Component/Common/Select";

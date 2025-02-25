@@ -1,9 +1,9 @@
 import styles from "./Dashboard.module.css";
-import { MetricsCards } from "../../Component/Organisation/metrics-cards.jsx";
-import { TransactionList } from "../../Component/Organisation/transaction-list.jsx";
-import { RevenueChart } from "../../Component/Organisation/revenue-chart.jsx";
-import { SalesReport } from "../../Component/Organisation/sales-report.jsx";
-import { PerformanceChart } from "../../Component/Organisation/performance-chart.jsx";
+import { MetricsCards } from "../../Component/Organisation/Dashboard/metrics-cards.jsx";
+import { TransactionList } from "../../Component/Organisation/Dashboard/transaction-list.jsx";
+import { RevenueChart } from "../../Component/Organisation/Dashboard/revenue-chart.jsx";
+import { SalesReport } from "../../Component/Organisation/Dashboard/sales-report.jsx";
+import { PerformanceChart } from "../../Component/Organisation/Dashboard/performance-chart.jsx";
 
 const Dashboard = () => {
 

@@ -3,7 +3,6 @@
     justify-content: center;
     flex: 1;
     align-items: center;
-    padding: 10px;
   }
   
   .button {
@@ -14,6 +13,7 @@
     padding: 12px 24px;
     border: none;
     flex: 1;
+    min-width: 120px;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;

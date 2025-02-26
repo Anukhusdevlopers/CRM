@@ -1,0 +1,196 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popupCard {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    min-height: 50vh;
+    background: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1001;
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow: hidden;
+}
+
+.popupHeader {
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.popupHeader p{
+    padding: 10px;
+}
+
+.searchContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.inviteButton {
+    background: #0A3B2C;
+    color: white;
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.closeButton {
+    cursor: pointer;
+    color: #555;
+    transition: color 0.2s ease;
+}
+
+.closeButton:hover {
+    color: #d9534f;
+}
+
+.description {
+    color: #555;
+    font-size: 14px;
+}
+
+.popupBody {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 10px;
+}
+
+.participantsList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 40vh;
+    overflow-y: auto;
+    padding-right: 10px;
+    scrollbar-width: none;
+}
+
+.participantItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    position: relative;
+}
+
+.participantItem:hover {
+    background: #f5f5f5;
+}
+
+.avatar {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background: #ddd;
+}
+
+.name {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.deleteIcon {
+    color: #d9534f;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.participantItem:hover .deleteIcon {
+    opacity: 1;
+}
+
+.popupFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    font-weight: bold;
+    color: #0A3B2C;
+}
+
+.copyLink,
+.filterOption {
+    cursor: pointer;
+}
+
+.copyLink:hover,
+.filterOption:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .popupCard {
+        width: 90vw;
+        max-width: none;
+        min-height: auto;
+        max-height: 90vh;
+        padding: 15px;
+    }
+
+    .searchContainer {
+        gap: 5px;
+    }
+
+    .participantsList {
+        max-height: 50vh;
+    }
+
+    .participantItem {
+        gap: 5px;
+    }
+
+    .avatar {
+        height: 30px;
+        width: 30px;
+    }
+
+    .name {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popupCard {
+        width: 95vw;
+        padding: 10px;
+    }
+
+    .inviteButton {
+        width: 100%;
+        text-align: center;
+    }
+
+    .popupFooter {
+        gap: 10px;
+    }
+}

@@ -7,7 +7,7 @@ import Select from "../../Component/Common/Select";
 import { generateStaticDummyData } from "../../constants/index";
 import Table from "../../Component/Organisation/LeadPanel/Table";
 import Grid from "../../Component/Organisation/LeadPanel/Grid";
-
+import Popup from "../../Component/Organisation/LeadPanel/Popup";
 export default function LeadPanel() {
   const [view, setView] = useState("table"); // Toggle between Table & Grid
   const [searchQuery, setSearchQuery] = useState(""); // Store search input
@@ -66,7 +66,7 @@ export default function LeadPanel() {
           </div>
           <div className={styles.right}>
             <button>Share</button>
-            <button>+ Create New</button>
+            <button>+ Add Employee</button>
             <div className={styles.icons}>
               <div className={styles.icon}></div>
               <div className={styles.icon}></div>
@@ -138,6 +138,7 @@ export default function LeadPanel() {
               </div>
             </div>
           </div>
+              {/* <Popup data={sortedData}/> */}
           <div className={styles.tablebody}>
             {view === "table" ? <Table data={sortedData} /> : <Grid data={sortedData} />}
           </div>

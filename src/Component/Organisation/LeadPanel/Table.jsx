@@ -57,7 +57,6 @@ const Table = ({ data }) => {
               </td>
               <td>
                 <div className={styles.profileCell}>
-                  <div className={styles.emptyCircle}></div>
                   <div>
                     <strong>{item.name}</strong>
                     <br />
@@ -68,7 +67,6 @@ const Table = ({ data }) => {
               <td>{item.email}</td>
               <td>
                 <div className={styles.companyCell}>
-                  <div className={styles.emptyCircle}></div>
                   <span>{item.company}</span>
                 </div>
               </td>

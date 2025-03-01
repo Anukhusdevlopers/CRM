@@ -108,3 +108,40 @@
     grid-template-columns: repeat(1, 1fr); /* 1 card per row for mobile */
   }
 }
+
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  gap: 12px;
+}
+
+.pageButton {
+  border:1px solid #0A3B2C;
+  color: #000;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 14px;
+}
+
+.pageButton:hover {
+  background-color: #0a3b2cd2;
+  color: #fff;
+}
+
+.pageButton:disabled {
+  cursor: not-allowed;
+  opacity: .4;
+}
+
+.pageInfo {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}

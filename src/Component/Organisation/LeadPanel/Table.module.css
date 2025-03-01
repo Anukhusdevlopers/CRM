@@ -68,12 +68,44 @@ th, td {
   text-align: left;
 }
 
-th:first-child, td:first-child {
-  width: 40px; /* Adjust width for checkboxes */
-  text-align: center;
-}
 
 input[type="checkbox"] {
   transform: scale(1.2); /* Make checkboxes slightly bigger */
   cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  gap: 12px;
+}
+
+.pageButton {
+  border : 2px solid #0A3B2C;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 14px;
+}
+
+.pageButton:hover {
+  background-color: #0a3b2cd2;
+  color: white;
+  border: none;
+}
+
+.pageButton:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
 }

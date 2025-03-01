@@ -1,43 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Table.module.css";
 
 const Table = ({ data }) => {
-  const [checkedItems, setCheckedItems] = useState(
-    new Array(data.length).fill(false)
-  );
-  const [isAllChecked, setIsAllChecked] = useState(false);
+  const rowsPerPage = 10;
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = Math.ceil(data.length / rowsPerPage);
 
-  // Handle header checkbox
-  const handleSelectAll = () => {
-    const newCheckedState = !isAllChecked;
-    setIsAllChecked(newCheckedState);
-    setCheckedItems(new Array(data.length).fill(newCheckedState));
-  };
+  // Reset page when data changes (e.g., after filtering/sorting)
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [data]);
 
-  // Handle individual checkbox
-  const handleCheckboxChange = (index) => {
-    const updatedCheckedItems = [...checkedItems];
-    updatedCheckedItems[index] = !updatedCheckedItems[index];
-
-    // Update "Select All" state based on individual selections
-    const allChecked = updatedCheckedItems.every((checked) => checked);
-    setIsAllChecked(allChecked);
-
-    setCheckedItems(updatedCheckedItems);
-  };
+  const startIndex = (currentPage - 1) * rowsPerPage;
+  const endIndex = startIndex + rowsPerPage;
+  const currentData = data.slice(startIndex, endIndex);
 
   return (
     <div className={styles.tableContainer}>
       <table>
         <thead>
           <tr>
-            <th>
-              <input
-                type="checkbox"
-                checked={isAllChecked}
-                onChange={handleSelectAll}
-              />
-            </th>
             <th>Profile</th>
             <th>Contact</th>
             <th>Company</th>
@@ -46,15 +28,8 @@ const Table = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {data.map((item, index) => (
-            <tr key={index}>
-              <td>
-                <input
-                  type="checkbox"
-                  checked={checkedItems[index]}
-                  onChange={() => handleCheckboxChange(index)}
-                />
-              </td>
+          {currentData.map((item) => (
+            <tr key={item.id}>
               <td>
                 <div className={styles.profileCell}>
                   <div>
@@ -71,9 +46,7 @@ const Table = ({ data }) => {
                 </div>
               </td>
               <td>
-                <span
-                  className={`${styles.status} ${styles[item.status.toLowerCase()]}`}
-                >
+                <span className={`${styles.status} ${styles[item.status.toLowerCase()]}`}>
                   {item.status}
                 </span>
               </td>
@@ -82,6 +55,29 @@ const Table = ({ data }) => {
           ))}
         </tbody>
       </table>
+
+      {/* Pagination Controls */}
+      <div className={styles.pagination}>
+        <button
+          className={styles.pageButton}
+          disabled={currentPage === 1}
+          onClick={() => setCurrentPage(currentPage - 1)}
+        >
+           Previous 
+        </button>
+
+        <span className={styles.pageInfo}>
+          Page <strong>{currentPage}</strong> of <strong>{totalPages}</strong>
+        </span>
+
+        <button
+          className={styles.pageButton}
+          disabled={currentPage === totalPages}
+          onClick={() => setCurrentPage(currentPage + 1)}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 };

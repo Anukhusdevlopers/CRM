@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './Employees.module.css';
 import Table from '../../Component/Organisation/Employees/Table';
 import { generateEmployees } from '../../constants';
+import OrganizationChart from '../../Component/Organisation/Employees/OrganisationChart';
 
 const Employees = () => {
   const [activeTab, setActiveTab] = useState('manage');
@@ -92,7 +93,7 @@ const Employees = () => {
             <div className={styles.headerSubtitle}>You have added {currentEmployees} employee out of {maxEmployees} employees</div>
           </div>
         </div>
-          <button className={styles.addButton}>+ Add Employees</button>
+        <button className={styles.addButton}>+ Add Employees</button>
       </div>
 
       <div className={styles.tabsContainer}>
@@ -110,39 +111,42 @@ const Employees = () => {
         </div>
       </div>
 
-      <div className={styles.searchFilterContainer}>
-        <div className={styles.searchContainer}>
-          <span className={styles.searchIcon}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </span>
-          <input 
-            type="text" 
-            className={styles.searchInput} 
-            placeholder="Search keyword..." 
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-        </div>
-      </div>
+      {activeTab === 'manage' ? (
+        <>
+          <div className={styles.searchFilterContainer}>
+            <div className={styles.searchContainer}>
+              <span className={styles.searchIcon}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </span>
+              <input 
+                type="text" 
+                className={styles.searchInput} 
+                placeholder="Search keyword..." 
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+          </div>
 
-      <Table currentItems={currentItems} getBadgeClass={getBadgeClass} />
+          <Table currentItems={currentItems} getBadgeClass={getBadgeClass} />
 
-      {
-        currentItems.length > 9 ? (
-          <div className={styles.pagination}>
-        <div className={styles.paginationInfo}>
-          Showing {indexOfFirstItem + 1} to {Math.min(indexOfLastItem, filteredEmployees.length)} of {filteredEmployees.length} employees
-        </div>
-        <div className={styles.paginationControls}>
-          {renderPaginationButtons()}
-        </div>
-      </div>
-        ) : ""
-      }
-      </div>
+          {currentItems.length > 9 && (
+            <div className={styles.pagination}>
+              <div className={styles.paginationInfo}>
+                Showing {indexOfFirstItem + 1} to {Math.min(indexOfLastItem, filteredEmployees.length)} of {filteredEmployees.length} employees
+              </div>
+              <div className={styles.paginationControls}>
+                {renderPaginationButtons()}
+              </div>
+            </div>
+          )}
+        </> 
+      ) : <OrganizationChart />
+    }
+    </div>
   );
 };
 

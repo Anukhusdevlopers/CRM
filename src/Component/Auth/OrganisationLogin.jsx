@@ -29,7 +29,6 @@ export default function OrganisationLogin() {
 
     if (name === 'password') {
       if (!value.trim()) errorMessage = 'Password is required.';
-      else if (!passwordRegex.test(value)) errorMessage = 'Must be at least 8 characters, Must Contain A-Z, a-z, 0-9, Special Character .';
 
     }
 
@@ -52,13 +51,22 @@ export default function OrganisationLogin() {
   };
 
   const onClick = () => {
+    if (!form.email.trim()) {
+      alert('Email is required.');
+      return;
+    }
+  
+    if (!form.password.trim()) {
+      alert('Password is required.');
+      return;
+    }
+  
     if (isFormValid()) {
       console.log('Login Form Data:', form);
       setForm({ email: '', password: '' });
-    } else {
-      alert('Invalid email or password. Please check your input.');
     }
   };
+  
 
   return (
     <div className={styles.container}>

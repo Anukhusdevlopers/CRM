@@ -1,0 +1,102 @@
+.tableContainer {
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid #0000001d;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.tableHeader {
+    background-color: #f9fafb;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6b7280;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tableRow {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tableRow:hover {
+    background-color: #f9fafb;
+}
+
+.tableCell {
+    padding: 16px;
+    font-size: 14px;
+}
+
+.employeeInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.employeeName {
+    font-weight: 500;
+}
+
+.employeeEmail {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.designBadge {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: rgb(16, 185, 129);
+}
+
+.developmentBadge {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: rgb(59, 130, 246);
+}
+
+.hrBadge {
+    background-color: rgba(168, 85, 247, 0.1);
+    color: rgb(168, 85, 247);
+}
+
+.pmBadge {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: rgb(245, 158, 11);
+}
+
+.businessBadge {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: rgb(99, 102, 241);
+}
+
+.actionButton {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid #e5e7eb;
+    background-color: white;
+    margin-right: 8px;
+    margin-bottom: 4px;
+}

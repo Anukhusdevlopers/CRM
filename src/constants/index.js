@@ -392,60 +392,165 @@ export function generateStaticDummyData() {
 }
 
 
-  const generateEmployees = ()=> {
-    const departments = ['Design', 'Development', 'HR', 'PM', 'Business'];
-    const positions = ['Onsite - Fulltime', 'Remote - Fulltime', 'Onsite - Part-time', 'Remote - Part-time'];
-    const roles = [
-      'UX Designer', 'UI Designer', 'Product Designer', 'Creative Director',
-      'Frontend Developer', 'Backend Developer', 'Full Stack Developer', 'Head of Development',
-      'HR Manager', 'Sr. HR', 'HR Assistant', 'Recruiter',
-      'Project Manager', 'Head of PM', 'Sr. Project Manager', 'Product Owner',
-      'Business Analyst', 'Business Developer', 'Marketing Specialist', 'Sales Manager'
-    ];
-    
-    const avatars = [
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-      'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-    ];
-    
-    const firstNames = ['Brooklyn', 'Cody', 'Ralph', 'Bessie', 'Leslie', 'Mariana', 'Jenny', 'Arlene', 
-                        'Michael', 'Sarah', 'David', 'Emma', 'James', 'Olivia', 'Robert', 'Sophia', 
-                        'William', 'Ava', 'Joseph', 'Isabella'];
-    
-    const lastNames = ['Simmons', 'Fisher', 'Edwards', 'Cooper', 'Alexander', 'Jade', 'Wilson', 'McCoy',
-                       'Johnson', 'Smith', 'Williams', 'Jones', 'Brown', 'Davis', 'Miller', 'Wilson',
-                       'Moore', 'Taylor', 'Anderson', 'Thomas'];
-    
-    const employees= [];
-    
-    for (let i = 1; i <= 40; i++) {
-      const firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
-      const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
-      const department = departments[Math.floor(Math.random() * departments.length)];
-      const role = roles[Math.floor(Math.random() * roles.length)];
-      const position = positions[Math.floor(Math.random() * positions.length)];
-      const avatar = avatars[Math.floor(Math.random() * avatars.length)];
-      
-      employees.push({
-        id: i,
-        name: `${firstName} ${lastName}`,
-        email: `${firstName.toLowerCase()}_${lastName.toLowerCase()}@gmail.com`,
-        phone: `(+62) ${Math.floor(Math.random() * 900) + 100} ${Math.floor(Math.random() * 9000) + 1000} ${Math.floor(Math.random() * 9000) + 1000}`,
-        status: 'Active',
-        role,
-        department,
-        position,
-        avatar
-      });
-    }
-    
-    return employees;
-  };
-  
-  export  {generateEmployees};
+const generateEmployees = () => {
+  const departments = ['Design', 'Development', 'HR', 'PM', 'Business'];
+  const positions = ['Onsite - Fulltime', 'Remote - Fulltime', 'Onsite - Part-time', 'Remote - Part-time'];
+  const roles = [
+    'UX Designer', 'UI Designer', 'Product Designer', 'Creative Director',
+    'Frontend Developer', 'Backend Developer', 'Full Stack Developer', 'Head of Development',
+    'HR Manager', 'Sr. HR', 'HR Assistant', 'Recruiter',
+    'Project Manager', 'Head of PM', 'Sr. Project Manager', 'Product Owner',
+    'Business Analyst', 'Business Developer', 'Marketing Specialist', 'Sales Manager'
+  ];
+
+  const avatars = [
+    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+  ];
+
+  const firstNames = ['Brooklyn', 'Cody', 'Ralph', 'Bessie', 'Leslie', 'Mariana', 'Jenny', 'Arlene',
+    'Michael', 'Sarah', 'David', 'Emma', 'James', 'Olivia', 'Robert', 'Sophia',
+    'William', 'Ava', 'Joseph', 'Isabella'];
+
+  const lastNames = ['Simmons', 'Fisher', 'Edwards', 'Cooper', 'Alexander', 'Jade', 'Wilson', 'McCoy',
+    'Johnson', 'Smith', 'Williams', 'Jones', 'Brown', 'Davis', 'Miller', 'Wilson',
+    'Moore', 'Taylor', 'Anderson', 'Thomas'];
+
+  const employees = [];
+
+  for (let i = 1; i <= 40; i++) {
+    const firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+    const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+    const department = departments[Math.floor(Math.random() * departments.length)];
+    const role = roles[Math.floor(Math.random() * roles.length)];
+    const position = positions[Math.floor(Math.random() * positions.length)];
+    const avatar = avatars[Math.floor(Math.random() * avatars.length)];
+
+    employees.push({
+      id: i,
+      name: `${firstName} ${lastName}`,
+      email: `${firstName.toLowerCase()}_${lastName.toLowerCase()}@gmail.com`,
+      phone: `(+62) ${Math.floor(Math.random() * 900) + 100} ${Math.floor(Math.random() * 9000) + 1000} ${Math.floor(Math.random() * 9000) + 1000}`,
+      status: 'Active',
+      role,
+      department,
+      position,
+      avatar
+    });
+  }
+
+  return employees;
+};
+
+export { generateEmployees };
+
+
+export const orgData = {
+  organization: {
+    name: "Organization Name",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+  },
+  departments: [
+    {
+      head: {
+        title: "Employee Head",
+        name: "Employee Head Name",
+        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      },
+      employees: [
+        {
+          title: "Sales Employee",
+          name: "Sales Employee Name",
+          avatar: "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+        {
+          title: "Employee",
+          name: "Employee Name",
+          avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+      ],
+    },
+    {
+      head: {
+        title: "Employee Head",
+        name: "Employee Head Name",
+        avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      },
+      employees: [
+        {
+          title: "Sales Employee",
+          name: "Sales Employee Name",
+          avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+        {
+          title: "Employee",
+          name: "Employee Name",
+          avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+        {
+          title: "Employee",
+          name: "Employee Name",
+          avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+        {
+          title: "Employee",
+          name: "Employee Name",
+          avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+        {
+          title: "Employee",
+          name: "Employee Name",
+          avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+        {
+          title: "Employee",
+          name: "Employee Name",
+          avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+        {
+          title: "Employee",
+          name: "Employee Name",
+          avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        }
+        ,
+        {
+          title: "Employee",
+          name: "Employee Name",
+          avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+        {
+          title: "Employee",
+          name: "Employee Name",
+          avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+        {
+          title: "Employee",
+          name: "Employee Name",
+          avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        }
+        ,
+        {
+          title: "Employee",
+          name: "Employee Name",
+          avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+        {
+          title: "Employee",
+          name: "Employee Name",
+          avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+        {
+          title: "Employee",
+          name: "Employee Name",
+          avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        }
+      ],
+    },
+  ],
+}

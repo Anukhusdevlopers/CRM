@@ -1,0 +1,99 @@
+.container {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .editButton {
+    display: flex;
+    align-items: center;
+    color: black;
+    background: transparent;
+    border: 1px solid #00000032;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  
+  .editIcon {
+    margin-right: 5px;
+  }
+  
+  .chartContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    overflow: auto;
+    padding: 20px 0;
+    border: 1px solid #eee;
+    border-radius: 8px;
+  }
+  
+  svg {
+    display: block;
+    margin: auto;
+  }
+
+  /* Fix Image Clipping */
+.nodeImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Ensures circular images */
+    object-fit: cover; /* Prevents stretching */
+}
+
+  
+  .nodeCard {
+    fill: white;
+    stroke: #e0e0e0;
+    stroke-width: 1px;
+    rx: 8;
+    ry: 8;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+  }
+  .nodeCard {
+    fill: white;
+    stroke: #d1d1d1;
+    stroke-width: 1px;
+    rx: 12; /* More rounded corners */
+    ry: 12;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.15));
+}
+
+.nodeCard:hover {
+    fill: #f1f1f1;
+    stroke: #aaa;
+}
+
+/* Fix text positioning */
+text {
+    font-family: Arial, sans-serif;
+    dominant-baseline: middle;
+}
+
+/* Improve link visibility */
+.link {
+    stroke: #bbb;
+    stroke-width: 2px;
+}

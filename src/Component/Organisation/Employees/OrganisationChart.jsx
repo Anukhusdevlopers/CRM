@@ -35,6 +35,7 @@ const OrganisationChart = () => {
 
     // Convert orgData into D3 hierarchical format
     const hierarchyData = {
+        title: orgData.organization.title,
       name: orgData.organization.name,
       avatar: orgData.organization.avatar,
       children: orgData.departments.map((dept) => ({
@@ -108,7 +109,6 @@ const OrganisationChart = () => {
       .attr("width", nodeWidth)
       .attr("height", nodeHeight);
 
-    // Add Images
     // Add Images
     nodes
       .append("circle") // Add a circular mask

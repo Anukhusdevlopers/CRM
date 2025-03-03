@@ -2,7 +2,6 @@
   width: 280px;
   background-color: #0a3b2c;
   color: white;
-  z-index: 999999999;
   padding: 24px 16px;
   display: flex;
   height: 100vh;
@@ -99,7 +98,6 @@
 @media (max-width: 651px) {
   .sidebar {
     padding-top: 55px;
-    z-index: 999;
   }
 
 }

@@ -15,7 +15,7 @@ const OrganisationChart = () => {
     const containerHeight = chartRef.current.clientHeight;
 
     const width = 1200;
-    const height = 800;
+    const height = 1000;
     const nodeWidth = 250;
     const nodeHeight = 100;
 
@@ -35,7 +35,7 @@ const OrganisationChart = () => {
 
     // Convert orgData into D3 hierarchical format
     const hierarchyData = {
-        title: orgData.organization.title,
+      title: orgData.organization.title,
       name: orgData.organization.name,
       avatar: orgData.organization.avatar,
       children: orgData.departments.map((dept) => ({

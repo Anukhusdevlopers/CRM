@@ -44,7 +44,7 @@
     align-items: center;
     width: 100%;
     height: 600px;
-    overflow: auto;
+    overflow: hidden;
     padding: 20px 0;
     border: 1px solid #eee;
     border-radius: 8px;
@@ -96,4 +96,23 @@ text {
 .link {
     stroke: #bbb;
     stroke-width: 2px;
+}
+
+@media (max-width: 1200px) {
+  .chartContainer{
+    height: 400px;
+  }
+  
+}
+
+@media (max-width: 800px) {
+  .chartContainer{
+    height: 300px;
+  }
+}
+
+@media (max-width: 400px) {
+  .chartContainer{
+    height: 200px;
+  }
 }

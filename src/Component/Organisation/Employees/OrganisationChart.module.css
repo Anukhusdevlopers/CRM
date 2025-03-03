@@ -113,6 +113,6 @@ text {
 
 @media (max-width: 400px) {
   .chartContainer{
-    height: 200px;
+    height: 250px;
   }
 }

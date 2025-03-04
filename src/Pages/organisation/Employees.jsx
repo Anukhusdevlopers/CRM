@@ -124,7 +124,13 @@ const Employees = () => {
             </div>
           </div>
         </div>
-        <button onClick={() => setShowPopup(true)} className={styles.addButton}>+ Add Employees</button>
+        <button
+          onClick={() => !isMaxReached && setShowPopup(true)}
+          className={styles.addButton}
+          disabled={isMaxReached}
+        >
+          + Add Employees
+        </button>
       </div>
 
       <div className={styles.tabsContainer}>
@@ -146,9 +152,7 @@ const Employees = () => {
         </div>
       </div>
 
-      {showPopup && (
-          <PopupForm onClose={() => setShowPopup(false)} />
-      )}
+      {showPopup && <PopupForm onClose={() => setShowPopup(false)} />}
 
       {activeTab === "manage" ? (
         <>
@@ -198,7 +202,6 @@ const Employees = () => {
       ) : (
         <OrganizationChart />
       )}
-
     </div>
   );
 };

@@ -424,7 +424,7 @@ const generateEmployees = () => {
 
   const employees = [];
 
-  for (let i = 1; i <= 40; i++) {
+  for (let i = 1; i <= 39; i++) {
     const firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
     const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
     const department = departments[Math.floor(Math.random() * departments.length)];

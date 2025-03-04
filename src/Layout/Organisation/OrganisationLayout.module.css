@@ -48,7 +48,7 @@
 /* Menu Button */
 .menuButton,
 .closeButton {
-    position: absolute;
+    position: fixed;
     top: 13px;
     left: 20px;
     width: 33px;

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./ActionSearchBar.module.css";
 
-function ActionSearchBar({ allActions, onChange , label}) {
+function ActionSearchBar({ allActions, onChange , label, placeholder}) {
   const [query, setQuery] = useState("");
   const [result, setResult] = useState(allActions);
   const [isFocused, setIsFocused] = useState(false);
@@ -22,11 +22,15 @@ function ActionSearchBar({ allActions, onChange , label}) {
   return (
     <div className={styles.container}>
       <div className={styles.inputWrapper}>
+        {
+          label &&
         <label htmlFor="search" className={styles.label}>{label}</label>
+        }
         <div className={styles.inputContainer}>
           <input
             type="text"
             id="search"
+            placeholder={placeholder || ""}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setIsFocused(true)}

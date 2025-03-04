@@ -31,6 +31,7 @@
 .outlet {
     flex: 1;
     padding-left: 280px;
+    margin-top: 100px;
     width: 100%;
     transition: padding 0.3s ease-in-out;
 }
@@ -40,15 +41,18 @@
         padding-left: 0;
     }
 }
-
+.headercontainer{
+    position: relative;
+    z-index: 9;
+  }
 /* Menu Button */
 .menuButton,
 .closeButton {
-    position: fixed;
-    top: 20px;
+    position: absolute;
+    top: 13px;
     left: 20px;
-    width: 35px;
-    height: 35px;
+    width: 33px;
+    height: 30px;
     background: transparent;
     display: flex;
     align-items: center;

@@ -40,7 +40,10 @@ export default function OrganisationLayout() {
 
       {/* Main Content */}
       <div className={styles.outlet} onClick={() => setIsSidebarOpen(false)}>
-        <Header />
+        <div className={styles.headercontainer}>
+          <Header />
+
+        </div>
         <Outlet />
       </div>
     </div>

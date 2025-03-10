@@ -89,7 +89,7 @@ const Table = ({ data }) => {
                   </div>
                 </div>
               </td>
-              <td>{item.email}</td>
+              <td>{item.contact}</td>
               <td>
                 <div className={styles.companyCell}>
                   <span>{item.company}</span>

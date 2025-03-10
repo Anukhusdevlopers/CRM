@@ -10,10 +10,6 @@ export default function Header() {
       </div>
 
       <div className={styles.headerRight}>
-        <div className={styles.search}>
-        <Search size={20} />
-          <input type="search" placeholder="Search anything " />
-        </div>
         <button className={styles.iconButton}>
         <Bell size={20} />
         </button>

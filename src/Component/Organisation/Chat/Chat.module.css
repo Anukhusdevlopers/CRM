@@ -1,0 +1,35 @@
+.chatContainer{
+    width: 100%;
+    padding: 15px 15px;
+    border-bottom: 1px solid #0000000d;
+    transition: all .2s;
+}
+.chatItem{
+    display: flex;
+    align-items: center;
+}
+.profileImage {
+    width: 55px;
+    height: 55px;
+    padding: 1px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid; /* Default border width */
+    transition: border-color 0.3s ease;
+  }
+  
+.chatDetails{
+    margin-left: 10px;
+}
+.chatDetails h4{
+    font-size: 17px;
+    font-weight: 500;
+}
+.chatDetails p{
+    font-size: 15px;
+    color: #0000009a;
+}
+.chatContainer:hover{
+    background: #0000000d;
+    cursor: pointer;
+}

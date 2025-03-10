@@ -355,34 +355,38 @@ export const employeeRanges = [
   { id: 7, label: "2000+" }
 ];
 export function generateStaticDummyData() {
+  const generatePhoneNumber = () => {
+    return `+91 ${Math.floor(100 + Math.random() * 900)}-${Math.floor(100 + Math.random() * 900)}-${Math.floor(1000 + Math.random() * 9000)}`;
+  };
+
   return [
-    { name: "Olivia Anderson", email: "olivia@gmail.com", company: "Anderson Corp", status: "Accepted", value: "$1200", time: "Today at 14:50PM" },
-    { name: "Benjamin Ramirez", email: "benjamin@gmail.com", company: "Ramirez Corp", status: "Pending", value: "$3100", time: "Today at 11:43AM" },
-    { name: "Sophia Mitchell", email: "sophia@gmail.com", company: "Mitchell Corp", status: "Canceled", value: "$7800", time: "Today at 09:10AM" },
-    { name: "Liam Walker", email: "liam@gmail.com", company: "Walker Corp", status: "Accepted", value: "$5300", time: "Today at 08:24AM" },
-    { name: "Ava Bennett", email: "ava@gmail.com", company: "Bennett Corp", status: "Pending", value: "$4200", time: "Yesterday at 23:50PM" },
-    { name: "Mason Collins", email: "mason@gmail.com", company: "Collins Corp", status: "Accepted", value: "$2300", time: "Yesterday at 20:11PM" },
-    { name: "Ethan Scott", email: "ethan@gmail.com", company: "Scott Corp", status: "Canceled", value: "$9100", time: "Yesterday at 16:45PM" },
-    { name: "Emma Johnson", email: "emma@gmail.com", company: "Johnson Corp", status: "Accepted", value: "$1100", time: "Yesterday at 10:30AM" },
-    { name: "Noah White", email: "noah@gmail.com", company: "White Corp", status: "Pending", value: "$6500", time: "Yesterday at 08:20AM" },
-    { name: "Isabella Lewis", email: "isabella@gmail.com", company: "Lewis Corp", status: "Accepted", value: "$7600", time: "Yesterday at 07:15AM" },
+    { name: "Olivia Anderson", contact: generatePhoneNumber(), company: "Anderson Corp", status: "Accepted", value: "$1200", time: "Today at 14:50PM" },
+    { name: "Benjamin Ramirez", contact: generatePhoneNumber(), company: "Ramirez Corp", status: "Pending", value: "$3100", time: "Today at 11:43AM" },
+    { name: "Sophia Mitchell", contact: generatePhoneNumber(), company: "Mitchell Corp", status: "Canceled", value: "$7800", time: "Today at 09:10AM" },
+    { name: "Liam Walker", contact: generatePhoneNumber(), company: "Walker Corp", status: "Accepted", value: "$5300", time: "Today at 08:24AM" },
+    { name: "Ava Bennett", contact: generatePhoneNumber(), company: "Bennett Corp", status: "Pending", value: "$4200", time: "Yesterday at 23:50PM" },
+    { name: "Mason Collins", contact: generatePhoneNumber(), company: "Collins Corp", status: "Accepted", value: "$2300", time: "Yesterday at 20:11PM" },
+    { name: "Ethan Scott", contact: generatePhoneNumber(), company: "Scott Corp", status: "Canceled", value: "$9100", time: "Yesterday at 16:45PM" },
+    { name: "Emma Johnson", contact: generatePhoneNumber(), company: "Johnson Corp", status: "Accepted", value: "$1100", time: "Yesterday at 10:30AM" },
+    { name: "Noah White", contact: generatePhoneNumber(), company: "White Corp", status: "Pending", value: "$6500", time: "Yesterday at 08:20AM" },
+    { name: "Isabella Lewis", contact: generatePhoneNumber(), company: "Lewis Corp", status: "Accepted", value: "$7600", time: "Yesterday at 07:15AM" },
 
-    { name: "Daniel Carter", email: "daniel@gmail.com", company: "Carter Corp", status: "Accepted", value: "$5400", time: "Today at 12:30PM" },
-    { name: "Emily Hall", email: "emily@gmail.com", company: "Hall Corp", status: "Pending", value: "$4300", time: "Today at 10:15AM" },
-    { name: "Michael Parker", email: "michael@gmail.com", company: "Parker Corp", status: "Canceled", value: "$6200", time: "Yesterday at 21:40PM" },
-    { name: "Sophia Turner", email: "sophia.t@gmail.com", company: "Turner Corp", status: "Accepted", value: "$8700", time: "Yesterday at 18:10PM" },
-    { name: "Jacob Hernandez", email: "jacob@gmail.com", company: "Hernandez Corp", status: "Pending", value: "$9200", time: "Today at 15:20PM" },
-    { name: "Isla Wright", email: "isla@gmail.com", company: "Wright Corp", status: "Accepted", value: "$3300", time: "Today at 13:50PM" },
-    { name: "William Adams", email: "william@gmail.com", company: "Adams Corp", status: "Canceled", value: "$1400", time: "Yesterday at 11:20AM" },
-    { name: "Charlotte Baker", email: "charlotte@gmail.com", company: "Baker Corp", status: "Pending", value: "$7500", time: "Yesterday at 09:45AM" },
-    { name: "Elijah Campbell", email: "elijah@gmail.com", company: "Campbell Corp", status: "Accepted", value: "$2600", time: "Today at 16:30PM" },
-    { name: "Mia Rivera", email: "mia@gmail.com", company: "Rivera Corp", status: "Pending", value: "$5800", time: "Today at 14:10PM" },
+    { name: "Daniel Carter", contact: generatePhoneNumber(), company: "Carter Corp", status: "Accepted", value: "$5400", time: "Today at 12:30PM" },
+    { name: "Emily Hall", contact: generatePhoneNumber(), company: "Hall Corp", status: "Pending", value: "$4300", time: "Today at 10:15AM" },
+    { name: "Michael Parker", contact: generatePhoneNumber(), company: "Parker Corp", status: "Canceled", value: "$6200", time: "Yesterday at 21:40PM" },
+    { name: "Sophia Turner", contact: generatePhoneNumber(), company: "Turner Corp", status: "Accepted", value: "$8700", time: "Yesterday at 18:10PM" },
+    { name: "Jacob Hernandez", contact: generatePhoneNumber(), company: "Hernandez Corp", status: "Pending", value: "$9200", time: "Today at 15:20PM" },
+    { name: "Isla Wright", contact: generatePhoneNumber(), company: "Wright Corp", status: "Accepted", value: "$3300", time: "Today at 13:50PM" },
+    { name: "William Adams", contact: generatePhoneNumber(), company: "Adams Corp", status: "Canceled", value: "$1400", time: "Yesterday at 11:20AM" },
+    { name: "Charlotte Baker", contact: generatePhoneNumber(), company: "Baker Corp", status: "Pending", value: "$7500", time: "Yesterday at 09:45AM" },
+    { name: "Elijah Campbell", contact: generatePhoneNumber(), company: "Campbell Corp", status: "Accepted", value: "$2600", time: "Today at 16:30PM" },
+    { name: "Mia Rivera", contact: generatePhoneNumber(), company: "Rivera Corp", status: "Pending", value: "$5800", time: "Today at 14:10PM" },
 
-    // Add more records here...
+    // Additional records
   ].concat(
     Array.from({ length: 80 }, (_, i) => ({
       name: `User ${i + 21}`,
-      email: `user${i + 21}@gmail.com`,
+      contact: generatePhoneNumber(),
       company: `Company ${i + 21}`,
       status: ["Accepted", "Pending", "Canceled"][Math.floor(Math.random() * 3)],
       value: `$${(Math.random() * (15000 - 500) + 500).toFixed(2)}`,
@@ -424,7 +428,7 @@ const generateEmployees = () => {
 
   const employees = [];
 
-  for (let i = 1; i <= 39; i++) {
+  for (let i = 1; i <= 40; i++) {
     const firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
     const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
     const department = departments[Math.floor(Math.random() * departments.length)];
@@ -475,19 +479,19 @@ export const orgData = {
           name: "Employee Name",
           avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
         },
-        
+
         {
           title: "Employee",
           name: "Employee Name",
           avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
         },
-        
+
         {
           title: "Employee",
           name: "Employee Name",
           avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
         },
-        
+
         {
           title: "Employee",
           name: "Employee Name",
@@ -545,9 +549,897 @@ export const orgData = {
           name: "Employee Name",
           avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
         },
-        
-        
+
+
       ],
     },
   ],
 }
+
+export const ChatData = [
+  {
+    "name": "Daniel Harris",
+    "id": 0,
+    "status": "ofline",
+    "profileImage": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "lastMessage": "That was epic! Let's do it again."
+  },
+  {
+    "name": "Alice Johnson",
+    "id": 1,
+    "status": "online",
+    "profileImage": "https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
+    "lastMessage": "Hey, are we still on for tonight?"
+  },
+  {
+    "name": "David Smith",
+    "id": 2,
+    "status": "ofline",
+    "profileImage": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+    "lastMessage": "I'll send you the details in a bit!"
+  },
+  {
+    "name": "Sophia Martinez",
+    "id": 3,
+    "status": "online",
+    "profileImage": "https://plus.unsplash.com/premium_photo-1670071482460-5c08776521fe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+    "lastMessage": "Just finished my project! 🎉"
+  },
+  {
+    "name": "Michael Brown",
+    "id": 4,
+    "status": "ofline",
+    "profileImage": "https://plus.unsplash.com/premium_photo-1664541336896-b3d5f7dec9a3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
+    "lastMessage": "Haha, that was hilarious! 😂"
+  },
+  {
+    "name": "Emily Davis",
+    "id": 5,
+    "status": "ofline",
+    "profileImage": "https://images.unsplash.com/photo-1499887142886-791eca5918cd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+    "lastMessage": "Can't wait to catch up!"
+  },
+  {
+    "name": "James Wilson",
+    "id": 6,
+    "status": "online",
+    "profileImage": "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+    "lastMessage": "Let's meet at the usual spot."
+  },
+  {
+    "name": "Olivia Taylor",
+    "id": 7,
+    "status": "online",
+    "profileImage": "https://plus.unsplash.com/premium_photo-1688350808212-4e6908a03925?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+    "lastMessage": "That sounds like a great idea!"
+  },
+  {
+    "name": "Ethan Thomas",
+    "id": 8,
+    "status": "ofline",
+    "profileImage": "https://images.unsplash.com/photo-1544168190-79c17527004f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+    "lastMessage": "I'll call you in a few."
+  },
+  {
+    "name": "Charlotte White",
+    "id": 9,
+    "status": "online",
+    "profileImage": "https://plus.unsplash.com/premium_photo-1675626487177-c3d2f8d9ccf7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fHVzZXJ8ZW58MHx8MHx8fDA%3D",
+    "lastMessage": "See you soon! 😊"
+  },
+
+]
+
+export const Chats = [
+  {
+    "name": "Ethan Harris",
+    "id": 0,
+    "messages": [
+      {
+        "sender": "Ethan Harris",
+        "text": "Hey, are we still on for tonight?",
+        "timestamp": "2025-03-15T18:30:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Yeah, for sure! What time are we meeting?",
+        "timestamp": "2025-03-15T18:33:00Z"
+      },
+      {
+        "sender": "Ethan Harris",
+        "text": "7 PM at the usual place. Sounds good?",
+        "timestamp": "2025-03-15T18:42:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Perfect, see you then!",
+        "timestamp": "2025-03-15T18:36:00Z"
+      },
+      {
+        "sender": "Ethan Harris",
+        "text": "By the way, are you bringing your car?",
+        "timestamp": "2025-03-15T18:58:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Yeah, I can drive. Need a ride?",
+        "timestamp": "2025-03-15T18:45:00Z"
+      },
+      {
+        "sender": "Ethan Harris",
+        "text": "That\u2019d be great, thanks!",
+        "timestamp": "2025-03-15T19:06:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "No problem! Pick you up at 6:30?",
+        "timestamp": "2025-03-15T19:26:00Z"
+      },
+      {
+        "sender": "Ethan Harris",
+        "text": "Sounds good! Also, should we invite James?",
+        "timestamp": "2025-03-15T19:02:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Yeah, let\u2019s ask him.",
+        "timestamp": "2025-03-15T19:15:00Z"
+      },
+      {
+        "sender": "Ethan Harris",
+        "text": "I just texted him. Waiting for his reply.",
+        "timestamp": "2025-03-15T18:50:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Cool. Also, is it casual or should I dress up?",
+        "timestamp": "2025-03-15T19:47:00Z"
+      },
+      {
+        "sender": "Ethan Harris",
+        "text": "Casual is fine!",
+        "timestamp": "2025-03-15T19:06:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Got it. Let\u2019s have a great time!",
+        "timestamp": "2025-03-15T19:09:00Z"
+      },
+      {
+        "sender": "Ethan Harris",
+        "text": "Absolutely! See you soon!",
+        "timestamp": "2025-03-15T20:36:00Z"
+      }
+    ]
+  },
+  {
+    "name": "Alice Johnson",
+    "id": 1,
+    "messages": [
+      {
+        "sender": "Alice Johnson",
+        "text": "Hey, are we still on for tonight?",
+        "timestamp": "2025-03-06T18:30:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Yeah, for sure! What time are we meeting?",
+        "timestamp": "2025-03-06T18:39:00Z"
+      },
+      {
+        "sender": "Alice Johnson",
+        "text": "7 PM at the usual place. Sounds good?",
+        "timestamp": "2025-03-06T18:36:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Perfect, see you then!",
+        "timestamp": "2025-03-06T18:57:00Z"
+      },
+      {
+        "sender": "Alice Johnson",
+        "text": "By the way, are you bringing your car?",
+        "timestamp": "2025-03-06T19:06:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Yeah, I can drive. Need a ride?",
+        "timestamp": "2025-03-06T18:50:00Z"
+      },
+      {
+        "sender": "Alice Johnson",
+        "text": "That\u2019d be great, thanks!",
+        "timestamp": "2025-03-06T19:06:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "No problem! Pick you up at 6:30?",
+        "timestamp": "2025-03-06T18:51:00Z"
+      },
+      {
+        "sender": "Alice Johnson",
+        "text": "Sounds good! Also, should we invite James?",
+        "timestamp": "2025-03-06T19:02:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Yeah, let\u2019s ask him.",
+        "timestamp": "2025-03-06T19:24:00Z"
+      },
+      {
+        "sender": "Alice Johnson",
+        "text": "I just texted him. Waiting for his reply.",
+        "timestamp": "2025-03-06T20:00:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Cool. Also, is it casual or should I dress up?",
+        "timestamp": "2025-03-06T19:14:00Z"
+      },
+      {
+        "sender": "Alice Johnson",
+        "text": "Casual is fine!",
+        "timestamp": "2025-03-06T19:54:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Got it. Let\u2019s have a great time!",
+        "timestamp": "2025-03-06T18:56:00Z"
+      },
+      {
+        "sender": "Alice Johnson",
+        "text": "Absolutely! See you soon!",
+        "timestamp": "2025-03-06T20:36:00Z"
+      }
+    ]
+  },
+  {
+    "name": "David Smith",
+    "id": 2,
+    "messages": [
+      {
+        "sender": "David Smith",
+        "text": "I'll send you the details in a bit!",
+        "timestamp": "2025-03-07T18:30:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Cool, take your time. Need anything from me?",
+        "timestamp": "2025-03-07T18:35:00Z"
+      },
+      {
+        "sender": "David Smith",
+        "text": "Nah, just be ready!",
+        "timestamp": "2025-03-07T18:42:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Always ready! What\u2019s the plan?",
+        "timestamp": "2025-03-07T18:57:00Z"
+      },
+      {
+        "sender": "David Smith",
+        "text": "It\u2019s a surprise, just trust me.",
+        "timestamp": "2025-03-07T18:46:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Haha, alright. Do I need to bring anything?",
+        "timestamp": "2025-03-07T18:45:00Z"
+      },
+      {
+        "sender": "David Smith",
+        "text": "Just your energy, bro!",
+        "timestamp": "2025-03-07T19:30:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Alright, hyped now!",
+        "timestamp": "2025-03-07T18:58:00Z"
+      },
+      {
+        "sender": "David Smith",
+        "text": "Haha, that\u2019s the spirit!",
+        "timestamp": "2025-03-07T19:26:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "When do I get the details though? \ud83d\ude02",
+        "timestamp": "2025-03-07T18:57:00Z"
+      },
+      {
+        "sender": "David Smith",
+        "text": "Soon! Patience, my friend.",
+        "timestamp": "2025-03-07T19:10:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Fine, fine. Just don\u2019t make me wait too long.",
+        "timestamp": "2025-03-07T19:36:00Z"
+      },
+      {
+        "sender": "David Smith",
+        "text": "You\u2019ll know everything in an hour.",
+        "timestamp": "2025-03-07T19:30:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Better be worth the suspense!",
+        "timestamp": "2025-03-07T18:56:00Z"
+      },
+      {
+        "sender": "David Smith",
+        "text": "Trust me, it will be!",
+        "timestamp": "2025-03-07T19:54:00Z"
+      }
+    ]
+  },
+  {
+    "name": "Sophia Martinez",
+    "id": 3,
+    "messages": [
+      {
+        "sender": "Sophia Martinez",
+        "text": "Just finished my project! \ud83c\udf89",
+        "timestamp": "2025-03-08T18:30:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Awesome! What was it about?",
+        "timestamp": "2025-03-08T18:39:00Z"
+      },
+      {
+        "sender": "Sophia Martinez",
+        "text": "A website for tracking personal goals.",
+        "timestamp": "2025-03-08T18:42:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "That sounds super useful!",
+        "timestamp": "2025-03-08T19:00:00Z"
+      },
+      {
+        "sender": "Sophia Martinez",
+        "text": "Yeah, I\u2019m hoping to launch it soon.",
+        "timestamp": "2025-03-08T19:10:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Nice! Need any help with testing?",
+        "timestamp": "2025-03-08T19:00:00Z"
+      },
+      {
+        "sender": "Sophia Martinez",
+        "text": "That\u2019d be great! I\u2019ll send you the link.",
+        "timestamp": "2025-03-08T19:06:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Perfect, I\u2019ll check it out tonight.",
+        "timestamp": "2025-03-08T19:05:00Z"
+      },
+      {
+        "sender": "Sophia Martinez",
+        "text": "Thanks! Let me know if you find any bugs.",
+        "timestamp": "2025-03-08T19:02:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Will do. Also, are you adding a dark mode?",
+        "timestamp": "2025-03-08T19:33:00Z"
+      },
+      {
+        "sender": "Sophia Martinez",
+        "text": "Haha, yes! That\u2019s on my to-do list.",
+        "timestamp": "2025-03-08T19:40:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Good! Dark mode is a must.",
+        "timestamp": "2025-03-08T19:47:00Z"
+      },
+      {
+        "sender": "Sophia Martinez",
+        "text": "Agreed! What are you working on?",
+        "timestamp": "2025-03-08T19:06:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Some React projects, as usual.",
+        "timestamp": "2025-03-08T18:56:00Z"
+      },
+      {
+        "sender": "Sophia Martinez",
+        "text": "Nice! Keep me posted on your progress!",
+        "timestamp": "2025-03-08T20:22:00Z"
+      }
+    ]
+  },
+  {
+    "name": "James Carter",
+    "id": 4,
+    "messages": [
+      {
+        "sender": "James Carter",
+        "text": "Hey, are we still on for tonight?",
+        "timestamp": "2025-03-09T18:30:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Yeah, for sure! What time are we meeting?",
+        "timestamp": "2025-03-09T18:37:00Z"
+      },
+      {
+        "sender": "James Carter",
+        "text": "7 PM at the usual place. Sounds good?",
+        "timestamp": "2025-03-09T18:34:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Perfect, see you then!",
+        "timestamp": "2025-03-09T19:00:00Z"
+      },
+      {
+        "sender": "James Carter",
+        "text": "By the way, are you bringing your car?",
+        "timestamp": "2025-03-09T19:06:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Yeah, I can drive. Need a ride?",
+        "timestamp": "2025-03-09T18:50:00Z"
+      },
+      {
+        "sender": "James Carter",
+        "text": "That\u2019d be great, thanks!",
+        "timestamp": "2025-03-09T19:06:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "No problem! Pick you up at 6:30?",
+        "timestamp": "2025-03-09T19:12:00Z"
+      },
+      {
+        "sender": "James Carter",
+        "text": "Sounds good! Also, should we invite James?",
+        "timestamp": "2025-03-09T19:18:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Yeah, let\u2019s ask him.",
+        "timestamp": "2025-03-09T19:51:00Z"
+      },
+      {
+        "sender": "James Carter",
+        "text": "I just texted him. Waiting for his reply.",
+        "timestamp": "2025-03-09T19:40:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Cool. Also, is it casual or should I dress up?",
+        "timestamp": "2025-03-09T19:03:00Z"
+      },
+      {
+        "sender": "James Carter",
+        "text": "Casual is fine!",
+        "timestamp": "2025-03-09T20:30:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Got it. Let\u2019s have a great time!",
+        "timestamp": "2025-03-09T19:35:00Z"
+      },
+      {
+        "sender": "James Carter",
+        "text": "Absolutely! See you soon!",
+        "timestamp": "2025-03-09T20:50:00Z"
+      }
+    ]
+  },
+  {
+    "name": "Emma Brown",
+    "id": 5,
+    "messages": [
+      {
+        "sender": "Emma Brown",
+        "text": "I'll send you the details in a bit!",
+        "timestamp": "2025-03-10T18:30:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Cool, take your time. Need anything from me?",
+        "timestamp": "2025-03-10T18:37:00Z"
+      },
+      {
+        "sender": "Emma Brown",
+        "text": "Nah, just be ready!",
+        "timestamp": "2025-03-10T18:48:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Always ready! What\u2019s the plan?",
+        "timestamp": "2025-03-10T18:36:00Z"
+      },
+      {
+        "sender": "Emma Brown",
+        "text": "It\u2019s a surprise, just trust me.",
+        "timestamp": "2025-03-10T18:54:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Haha, alright. Do I need to bring anything?",
+        "timestamp": "2025-03-10T19:05:00Z"
+      },
+      {
+        "sender": "Emma Brown",
+        "text": "Just your energy, bro!",
+        "timestamp": "2025-03-10T19:12:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Alright, hyped now!",
+        "timestamp": "2025-03-10T19:05:00Z"
+      },
+      {
+        "sender": "Emma Brown",
+        "text": "Haha, that\u2019s the spirit!",
+        "timestamp": "2025-03-10T19:50:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "When do I get the details though? \ud83d\ude02",
+        "timestamp": "2025-03-10T19:33:00Z"
+      },
+      {
+        "sender": "Emma Brown",
+        "text": "Soon! Patience, my friend.",
+        "timestamp": "2025-03-10T20:00:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Fine, fine. Just don\u2019t make me wait too long.",
+        "timestamp": "2025-03-10T19:14:00Z"
+      },
+      {
+        "sender": "Emma Brown",
+        "text": "You\u2019ll know everything in an hour.",
+        "timestamp": "2025-03-10T20:06:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Better be worth the suspense!",
+        "timestamp": "2025-03-10T18:56:00Z"
+      },
+      {
+        "sender": "Emma Brown",
+        "text": "Trust me, it will be!",
+        "timestamp": "2025-03-10T20:22:00Z"
+      }
+    ]
+  },
+  {
+    "name": "Liam Wilson",
+    "id": 6,
+    "messages": [
+      {
+        "sender": "Liam Wilson",
+        "text": "Just finished my project! \ud83c\udf89",
+        "timestamp": "2025-03-11T18:30:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Awesome! What was it about?",
+        "timestamp": "2025-03-11T18:35:00Z"
+      },
+      {
+        "sender": "Liam Wilson",
+        "text": "A website for tracking personal goals.",
+        "timestamp": "2025-03-11T18:40:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "That sounds super useful!",
+        "timestamp": "2025-03-11T18:45:00Z"
+      },
+      {
+        "sender": "Liam Wilson",
+        "text": "Yeah, I\u2019m hoping to launch it soon.",
+        "timestamp": "2025-03-11T18:54:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Nice! Need any help with testing?",
+        "timestamp": "2025-03-11T19:10:00Z"
+      },
+      {
+        "sender": "Liam Wilson",
+        "text": "That\u2019d be great! I\u2019ll send you the link.",
+        "timestamp": "2025-03-11T19:18:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Perfect, I\u2019ll check it out tonight.",
+        "timestamp": "2025-03-11T18:44:00Z"
+      },
+      {
+        "sender": "Liam Wilson",
+        "text": "Thanks! Let me know if you find any bugs.",
+        "timestamp": "2025-03-11T18:54:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Will do. Also, are you adding a dark mode?",
+        "timestamp": "2025-03-11T19:15:00Z"
+      },
+      {
+        "sender": "Liam Wilson",
+        "text": "Haha, yes! That\u2019s on my to-do list.",
+        "timestamp": "2025-03-11T19:20:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Good! Dark mode is a must.",
+        "timestamp": "2025-03-11T19:14:00Z"
+      },
+      {
+        "sender": "Liam Wilson",
+        "text": "Agreed! What are you working on?",
+        "timestamp": "2025-03-11T19:42:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Some React projects, as usual.",
+        "timestamp": "2025-03-11T20:27:00Z"
+      },
+      {
+        "sender": "Liam Wilson",
+        "text": "Nice! Keep me posted on your progress!",
+        "timestamp": "2025-03-11T18:58:00Z"
+      }
+    ]
+  },
+  {
+    "name": "Olivia Davis",
+    "id": 7,
+    "messages": [
+      {
+        "sender": "Olivia Davis",
+        "text": "Hey, are we still on for tonight?",
+        "timestamp": "2025-03-12T18:30:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Yeah, for sure! What time are we meeting?",
+        "timestamp": "2025-03-12T18:33:00Z"
+      },
+      {
+        "sender": "Olivia Davis",
+        "text": "7 PM at the usual place. Sounds good?",
+        "timestamp": "2025-03-12T18:48:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Perfect, see you then!",
+        "timestamp": "2025-03-12T18:36:00Z"
+      },
+      {
+        "sender": "Olivia Davis",
+        "text": "By the way, are you bringing your car?",
+        "timestamp": "2025-03-12T19:06:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Yeah, I can drive. Need a ride?",
+        "timestamp": "2025-03-12T19:00:00Z"
+      },
+      {
+        "sender": "Olivia Davis",
+        "text": "That\u2019d be great, thanks!",
+        "timestamp": "2025-03-12T19:30:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "No problem! Pick you up at 6:30?",
+        "timestamp": "2025-03-12T19:19:00Z"
+      },
+      {
+        "sender": "Olivia Davis",
+        "text": "Sounds good! Also, should we invite James?",
+        "timestamp": "2025-03-12T19:02:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Yeah, let\u2019s ask him.",
+        "timestamp": "2025-03-12T19:51:00Z"
+      },
+      {
+        "sender": "Olivia Davis",
+        "text": "I just texted him. Waiting for his reply.",
+        "timestamp": "2025-03-12T19:00:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Cool. Also, is it casual or should I dress up?",
+        "timestamp": "2025-03-12T20:09:00Z"
+      },
+      {
+        "sender": "Olivia Davis",
+        "text": "Casual is fine!",
+        "timestamp": "2025-03-12T19:42:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Got it. Let\u2019s have a great time!",
+        "timestamp": "2025-03-12T18:56:00Z"
+      },
+      {
+        "sender": "Olivia Davis",
+        "text": "Absolutely! See you soon!",
+        "timestamp": "2025-03-12T20:22:00Z"
+      }
+    ]
+  },
+  {
+    "name": "Noah White",
+    "id": 8,
+    "messages": [
+      {
+        "sender": "Noah White",
+        "text": "I'll send you the details in a bit!",
+        "timestamp": "2025-03-13T18:30:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Cool, take your time. Need anything from me?",
+        "timestamp": "2025-03-13T18:37:00Z"
+      },
+      {
+        "sender": "Noah White",
+        "text": "Nah, just be ready!",
+        "timestamp": "2025-03-13T18:50:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Always ready! What\u2019s the plan?",
+        "timestamp": "2025-03-13T18:45:00Z"
+      },
+      {
+        "sender": "Noah White",
+        "text": "It\u2019s a surprise, just trust me.",
+        "timestamp": "2025-03-13T18:46:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Haha, alright. Do I need to bring anything?",
+        "timestamp": "2025-03-13T19:20:00Z"
+      },
+      {
+        "sender": "Noah White",
+        "text": "Just your energy, bro!",
+        "timestamp": "2025-03-13T19:06:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Alright, hyped now!",
+        "timestamp": "2025-03-13T18:44:00Z"
+      },
+      {
+        "sender": "Noah White",
+        "text": "Haha, that\u2019s the spirit!",
+        "timestamp": "2025-03-13T19:50:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "When do I get the details though? \ud83d\ude02",
+        "timestamp": "2025-03-13T19:06:00Z"
+      },
+      {
+        "sender": "Noah White",
+        "text": "Soon! Patience, my friend.",
+        "timestamp": "2025-03-13T19:10:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Fine, fine. Just don\u2019t make me wait too long.",
+        "timestamp": "2025-03-13T19:25:00Z"
+      },
+      {
+        "sender": "Noah White",
+        "text": "You\u2019ll know everything in an hour.",
+        "timestamp": "2025-03-13T19:18:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Better be worth the suspense!",
+        "timestamp": "2025-03-13T18:56:00Z"
+      },
+      {
+        "sender": "Noah White",
+        "text": "Trust me, it will be!",
+        "timestamp": "2025-03-13T20:08:00Z"
+      }
+    ]
+  },
+  {
+    "name": "Ava Thompson",
+    "id": 9,
+    "messages": [
+      {
+        "sender": "Ava Thompson",
+        "text": "Just finished my project! \ud83c\udf89",
+        "timestamp": "2025-03-14T18:30:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Awesome! What was it about?",
+        "timestamp": "2025-03-14T18:36:00Z"
+      },
+      {
+        "sender": "Ava Thompson",
+        "text": "A website for tracking personal goals.",
+        "timestamp": "2025-03-14T18:42:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "That sounds super useful!",
+        "timestamp": "2025-03-14T18:36:00Z"
+      },
+      {
+        "sender": "Ava Thompson",
+        "text": "Yeah, I\u2019m hoping to launch it soon.",
+        "timestamp": "2025-03-14T19:02:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Nice! Need any help with testing?",
+        "timestamp": "2025-03-14T18:40:00Z"
+      },
+      {
+        "sender": "Ava Thompson",
+        "text": "That\u2019d be great! I\u2019ll send you the link.",
+        "timestamp": "2025-03-14T18:54:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Perfect, I\u2019ll check it out tonight.",
+        "timestamp": "2025-03-14T19:05:00Z"
+      },
+      {
+        "sender": "Ava Thompson",
+        "text": "Thanks! Let me know if you find any bugs.",
+        "timestamp": "2025-03-14T19:26:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Will do. Also, are you adding a dark mode?",
+        "timestamp": "2025-03-14T19:33:00Z"
+      },
+      {
+        "sender": "Ava Thompson",
+        "text": "Haha, yes! That\u2019s on my to-do list.",
+        "timestamp": "2025-03-14T19:30:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Good! Dark mode is a must.",
+        "timestamp": "2025-03-14T19:25:00Z"
+      },
+      {
+        "sender": "Ava Thompson",
+        "text": "Agreed! What are you working on?",
+        "timestamp": "2025-03-14T20:18:00Z"
+      },
+      {
+        "sender": "You",
+        "text": "Some React projects, as usual.",
+        "timestamp": "2025-03-14T20:14:00Z"
+      },
+      {
+        "sender": "Ava Thompson",
+        "text": "Nice! Keep me posted on your progress!",
+        "timestamp": "2025-03-14T20:50:00Z"
+      }
+    ]
+  },
+
+]

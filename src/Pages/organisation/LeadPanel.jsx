@@ -92,16 +92,13 @@ export default function LeadPanel() {
                 <div className={styles.icon}></div> All
               </span>
               <span className={styles.tab}>
-                <div className={styles.icon}></div> Company
+                <div className={styles.icon}></div> Upcoming
               </span>
               <span className={styles.tab}>
-                <div className={styles.icon}></div> Contact
+                <div className={styles.icon}></div> Follow Up
               </span>
               <span className={styles.tab}>
-                <div className={styles.icon}></div> Estimate Value
-              </span>
-              <span className={styles.tab}>
-                <div className={styles.icon}></div> +
+                <div className={styles.icon}></div> Previous Lead
               </span>
             </div>
             <hr />

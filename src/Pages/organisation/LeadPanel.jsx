@@ -7,11 +7,12 @@ import Select from "../../Component/Common/Select";
 import { generateStaticDummyData } from "../../constants/index";
 import Table from "../../Component/Organisation/LeadPanel/Table";
 import Grid from "../../Component/Organisation/LeadPanel/Grid";
-import Popup from "../../Component/Organisation/LeadPanel/Popup";
+
 export default function LeadPanel() {
-  const [view, setView] = useState("table"); // Toggle between Table & Grid
-  const [searchQuery, setSearchQuery] = useState(""); // Store search input
-  const [sortBy, setSortBy] = useState(null); // Sorting selection
+  const [view, setView] = useState("table");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [sortBy, setSortBy] = useState(null);
+  const [activeTab, setActiveTab] = useState("All");
 
   const sortOptions = [
     { value: null, label: "Sort by" },
@@ -19,20 +20,25 @@ export default function LeadPanel() {
     { value: "N-Z2A", label: "Name Z-A" },
     { value: "C-A2Z", label: "Company A-Z" },
     { value: "C-Z2A", label: "Company Z-A" },
-    { value: "V-ASC", label: "Estimate Low to High" }, // Low to High
-    { value: "V-DESC", label: "Estimate High to Low" }, // High to Low
+    { value: "V-ASC", label: "Estimate Low to High" },
+    { value: "V-DESC", label: "Estimate High to Low" },
   ];
 
   const tableData = generateStaticDummyData();
 
-  // Filter data based on searchQuery (name, email, company)
-  const filteredData = tableData.filter((item) =>
+  // Filter by search query
+  let filteredData = tableData.filter((item) =>
     Object.values(item).some(
       (value) =>
         typeof value === "string" &&
         value.toLowerCase().includes(searchQuery.toLowerCase())
     )
   );
+
+  // Filter by active tab
+  if (activeTab !== "All") {
+    filteredData = filteredData.filter((item) => item.status === activeTab);
+  }
 
   // Sorting logic
   const sortedData = [...filteredData].sort((a, b) => {
@@ -62,16 +68,10 @@ export default function LeadPanel() {
         <div className={styles.head}>
           <div className={styles.left}>
             <h2>Lead Panel</h2>
-            <div className={styles.icon}></div>
           </div>
           <div className={styles.right}>
             <button>Share</button>
             <button>+ Add Employee</button>
-            <div className={styles.icons}>
-              <div className={styles.icon}></div>
-              <div className={styles.icon}></div>
-              <div className={styles.icon}></div>
-            </div>
           </div>
         </div>
 
@@ -88,54 +88,47 @@ export default function LeadPanel() {
         <div className={styles.tablecontainer}>
           <div className={styles.tablehead}>
             <div className={styles.tabs}>
-              <span className={styles.tab}>
-                <div className={styles.icon}></div> All
-              </span>
-              <span className={styles.tab}>
-                <div className={styles.icon}></div> Upcoming
-              </span>
-              <span className={styles.tab}>
-                <div className={styles.icon}></div> Follow Up
-              </span>
-              <span className={styles.tab}>
-                <div className={styles.icon}></div> Previous Lead
-              </span>
+              {["All", "Upcoming", "Follow Up", "Previous Lead"].map((tab) => (
+                <span
+                  key={tab}
+                  className={activeTab === tab ? styles.activeTab : styles.tab}
+                  onClick={() => setActiveTab(tab)}
+                >
+                  {tab}
+                </span>
+              ))}
             </div>
             <hr />
             <div className={styles.searchs}>
               <div className={styles.searchleft}>
-                <div className={styles.search}>
-                  <input
-                    placeholder="Search by Name, Email, or Company"
-                    type="search"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                  />
-                </div>
+                <input
+                  placeholder="Search by Name, Email, or Company"
+                  type="search"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
                 <span>Import</span>
               </div>
               <div className={styles.searchright}>
                 <div className={styles.view}>
                   <button
-                    className={view === "table" ? styles.active : styles.inactive}
+                    className={view === "table" ? styles.active : ""}
                     onClick={() => setView("table")}
                   >
-                    <div className={styles.icon}></div> List
+                    List
                   </button>
                   <button
-                    className={view === "grid" ? styles.active : styles.inactive}
+                    className={view === "grid" ? styles.active : ""}
                     onClick={() => setView("grid")}
                   >
-                    <div className={styles.icon}></div> Grid
+                    Grid
                   </button>
                 </div>
-                <div>
-                  <Select options={sortOptions} onChange={(e) => setSortBy(e.target.value)} />
-                </div>
+                <Select options={sortOptions} onChange={(e) => setSortBy(e.target.value)} />
               </div>
             </div>
           </div>
-              {/* <Popup data={sortedData}/> */}
+
           <div className={styles.tablebody}>
             {view === "table" ? <Table data={sortedData} /> : <Grid data={sortedData} />}
           </div>

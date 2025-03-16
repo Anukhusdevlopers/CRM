@@ -10,6 +10,22 @@
   flex-wrap: wrap;
 }
 
+.cta{
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  transition: all 0.5s;
+  margin-right: 8px;
+  margin-bottom: 4px;
+}
+.cta:hover{
+  border: 1px solid #0A3B2C;
+}
+
 .card {
   background: #ffffff;
   padding: 20px;

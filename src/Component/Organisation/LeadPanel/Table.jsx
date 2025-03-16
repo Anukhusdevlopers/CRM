@@ -74,7 +74,7 @@ const Table = ({ data }) => {
             <th>Contact</th>
             <th>Company</th>
             <th>Status</th>
-            <th>Estimate Value</th>
+            <th>CTA</th>
           </tr>
         </thead>
         <tbody>
@@ -100,7 +100,8 @@ const Table = ({ data }) => {
                   {item.status}
                 </span>
               </td>
-              <td>{item.value}</td>
+              <td style={{display: "flex", justifyContent : "space-evenly", alignItems : "center" , borderBottom: "1px"}}><button className={styles.cta}>Update</button>
+              <button className={styles.cta}>Message</button></td>
             </tr>
           ))}
         </tbody>

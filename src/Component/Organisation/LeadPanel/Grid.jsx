@@ -35,6 +35,9 @@ export default function Grid({ data }) {
                   {item.status}
                 </span>
               </p>
+              <div>
+                <button className={styles.cta}>Update</button><button className={styles.cta}>Message</button>
+              </div>
             </div>
           ))
         ) : (

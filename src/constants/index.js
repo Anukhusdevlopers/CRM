@@ -360,27 +360,27 @@ export function generateStaticDummyData() {
   };
 
   return [
-    { name: "Olivia Anderson", contact: generatePhoneNumber(), company: "Anderson Corp", status: "Upcoming", value: "$1200", time: "Today at 14:50PM" },
-    { name: "Benjamin Ramirez", contact: generatePhoneNumber(), company: "Ramirez Corp", status: "In Progress", value: "$3100", time: "Today at 11:43AM" },
-    { name: "Sophia Mitchell", contact: generatePhoneNumber(), company: "Mitchell Corp", status: "Follow Up", value: "$7800", time: "Today at 09:10AM" },
-    { name: "Liam Walker", contact: generatePhoneNumber(), company: "Walker Corp", status: "Upcoming", value: "$5300", time: "Today at 08:24AM" },
-    { name: "Ava Bennett", contact: generatePhoneNumber(), company: "Bennett Corp", status: "In Progress", value: "$4200", time: "Yesterday at 23:50PM" },
-    { name: "Mason Collins", contact: generatePhoneNumber(), company: "Collins Corp", status: "Upcoming", value: "$2300", time: "Yesterday at 20:11PM" },
-    { name: "Ethan Scott", contact: generatePhoneNumber(), company: "Scott Corp", status: "Follow Up", value: "$9100", time: "Yesterday at 16:45PM" },
-    { name: "Emma Johnson", contact: generatePhoneNumber(), company: "Johnson Corp", status: "Upcoming", value: "$1100", time: "Yesterday at 10:30AM" },
-    { name: "Noah White", contact: generatePhoneNumber(), company: "White Corp", status: "In Progress", value: "$6500", time: "Yesterday at 08:20AM" },
-    { name: "Isabella Lewis", contact: generatePhoneNumber(), company: "Lewis Corp", status: "Upcoming", value: "$7600", time: "Yesterday at 07:15AM" },
+    { name: "Olivia Anderson", contact: generatePhoneNumber(), company: "Anderson Corp", status: "Upcoming", time: "Today at 14:50PM" },
+    { name: "Benjamin Ramirez", contact: generatePhoneNumber(), company: "Ramirez Corp", status: "In Progress", time: "Today at 11:43AM" },
+    { name: "Sophia Mitchell", contact: generatePhoneNumber(), company: "Mitchell Corp", status: "Follow Up", time: "Today at 09:10AM" },
+    { name: "Liam Walker", contact: generatePhoneNumber(), company: "Walker Corp", status: "Upcoming", time: "Today at 08:24AM" },
+    { name: "Ava Bennett", contact: generatePhoneNumber(), company: "Bennett Corp", status: "In Progress", time: "Yesterday at 23:50PM" },
+    { name: "Mason Collins", contact: generatePhoneNumber(), company: "Collins Corp", status: "Upcoming", time: "Yesterday at 20:11PM" },
+    { name: "Ethan Scott", contact: generatePhoneNumber(), company: "Scott Corp", status: "Follow Up", time: "Yesterday at 16:45PM" },
+    { name: "Emma Johnson", contact: generatePhoneNumber(), company: "Johnson Corp", status: "Upcoming", time: "Yesterday at 10:30AM" },
+    { name: "Noah White", contact: generatePhoneNumber(), company: "White Corp", status: "In Progress", time: "Yesterday at 08:20AM" },
+    { name: "Isabella Lewis", contact: generatePhoneNumber(), company: "Lewis Corp", status: "Upcoming", time: "Yesterday at 07:15AM" },
 
-    { name: "Daniel Carter", contact: generatePhoneNumber(), company: "Carter Corp", status: "Dead", value: "$5400", time: "Today at 12:30PM" },
-    { name: "Emily Hall", contact: generatePhoneNumber(), company: "Hall Corp", status: "In Progress", value: "$4300", time: "Today at 10:15AM" },
-    { name: "Michael Parker", contact: generatePhoneNumber(), company: "Parker Corp", status: "Follow Up", value: "$6200", time: "Yesterday at 21:40PM" },
-    { name: "Sophia Turner", contact: generatePhoneNumber(), company: "Turner Corp", status: "Dead", value: "$8700", time: "Yesterday at 18:10PM" },
-    { name: "Jacob Hernandez", contact: generatePhoneNumber(), company: "Hernandez Corp", status: "In Progress", value: "$9200", time: "Today at 15:20PM" },
-    { name: "Isla Wright", contact: generatePhoneNumber(), company: "Wright Corp", status: "Dead", value: "$3300", time: "Today at 13:50PM" },
-    { name: "William Adams", contact: generatePhoneNumber(), company: "Adams Corp", status: "Follow Up", value: "$1400", time: "Yesterday at 11:20AM" },
-    { name: "Charlotte Baker", contact: generatePhoneNumber(), company: "Baker Corp", status: "Costumer", value: "$7500", time: "Yesterday at 09:45AM" },
-    { name: "Elijah Campbell", contact: generatePhoneNumber(), company: "Campbell Corp", status: "Dead", value: "$2600", time: "Today at 16:30PM" },
-    { name: "Mia Rivera", contact: generatePhoneNumber(), company: "Rivera Corp", status: "Costumer", value: "$5800", time: "Today at 14:10PM" },
+    { name: "Daniel Carter", contact: generatePhoneNumber(), company: "Carter Corp", status: "Dead", time: "Today at 12:30PM" },
+    { name: "Emily Hall", contact: generatePhoneNumber(), company: "Hall Corp", status: "In Progress", time: "Today at 10:15AM" },
+    { name: "Michael Parker", contact: generatePhoneNumber(), company: "Parker Corp", status: "Follow Up", time: "Yesterday at 21:40PM" },
+    { name: "Sophia Turner", contact: generatePhoneNumber(), company: "Turner Corp", status: "Dead", time: "Yesterday at 18:10PM" },
+    { name: "Jacob Hernandez", contact: generatePhoneNumber(), company: "Hernandez Corp", status: "In Progress", time: "Today at 15:20PM" },
+    { name: "Isla Wright", contact: generatePhoneNumber(), company: "Wright Corp", status: "Dead", time: "Today at 13:50PM" },
+    { name: "William Adams", contact: generatePhoneNumber(), company: "Adams Corp", status: "Follow Up", time: "Yesterday at 11:20AM" },
+    { name: "Charlotte Baker", contact: generatePhoneNumber(), company: "Baker Corp", status: "Costumer", time: "Yesterday at 09:45AM" },
+    { name: "Elijah Campbell", contact: generatePhoneNumber(), company: "Campbell Corp", status: "Dead", time: "Today at 16:30PM" },
+    { name: "Mia Rivera", contact: generatePhoneNumber(), company: "Rivera Corp", status: "Costumer", time: "Today at 14:10PM" },
 
     // Additional records
   ].concat(
@@ -389,7 +389,6 @@ export function generateStaticDummyData() {
       contact: generatePhoneNumber(),
       company: `Company ${i + 21}`,
       status: ["Upcoming", "In Progress", "Follow Up", "Dead", "Costumer"][Math.floor(Math.random() * 3)],
-      value: `$${(Math.random() * (15000 - 500) + 500).toFixed(2)}`,
       time: ["Today at 10:00AM", "Yesterday at 3:00PM", "Yesterday at 8:00AM"][Math.floor(Math.random() * 3)],
     }))
   );

@@ -4,7 +4,7 @@ import TotalEstimate from "../../Component/Organisation/LeadPanel/TotalEstimate"
 import Customer from "../../Component/Organisation/LeadPanel/Customer";
 import Employee from "../../Component/Organisation/LeadPanel/Employee";
 import Select from "../../Component/Common/Select";
-import { generateStaticDummyData } from "../../constants/index";
+import Data from "../../constants/leadpanel-data.json";
 import Table from "../../Component/Organisation/LeadPanel/Table";
 import Grid from "../../Component/Organisation/LeadPanel/Grid";
 
@@ -24,10 +24,8 @@ export default function LeadPanel() {
     { value: "V-DESC", label: "Estimate High to Low" },
   ];
 
-  const tableData = generateStaticDummyData();
-
   // Filter by search query
-  let filteredData = tableData.filter((item) =>
+  let filteredData = Data.filter((item) =>
     Object.values(item).some(
       (value) =>
         typeof value === "string" &&

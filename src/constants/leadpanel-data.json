@@ -1,0 +1,1222 @@
+[
+    {
+        "id": 1,
+        "name": "Olivia Anderson",
+        "contact": "+91 908-076-0543",
+        "company": "Anderson Corp",
+        "status": "Upcoming",
+        "online" : true,
+        "profile_pic": "https://randomuser.me/api/portraits/men/1.jpg",
+        "messages": [
+            {
+                "sender": "Olivia Anderson",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Olivia Anderson",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Olivia Anderson",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Olivia Anderson",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Olivia Anderson",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Benjamin Ramirez",
+        "contact": "+91 918-176-1543",
+        "company": "Ramirez Corp",
+        "status": "In Progress",
+        "online" : true,
+        "profile_pic": "https://randomuser.me/api/portraits/women/2.jpg",
+        "messages": [
+            {
+                "sender": "Benjamin Ramirez",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Benjamin Ramirez",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Benjamin Ramirez",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Benjamin Ramirez",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Benjamin Ramirez",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Sophia Mitchell",
+        "contact": "+91 928-276-2543",
+        "company": "Mitchell Corp",
+        "status": "Follow Up",
+        "online" : false,
+        "profile_pic": "https://randomuser.me/api/portraits/men/3.jpg",
+        "messages": [
+            {
+                "sender": "Sophia Mitchell",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Sophia Mitchell",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Sophia Mitchell",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Sophia Mitchell",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Sophia Mitchell",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Liam Walker",
+        "contact": "+91 938-376-3543",
+        "company": "Walker Corp",
+        "status": "Completed",
+        "online" : true,
+        "profile_pic": "https://randomuser.me/api/portraits/women/4.jpg",
+        "messages": [
+            {
+                "sender": "Liam Walker",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Liam Walker",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Liam Walker",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Liam Walker",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Liam Walker",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Ava Bennett",
+        "contact": "+91 948-476-4543",
+        "company": "Bennett Corp",
+        "status": "Upcoming",
+        "online" : false,
+        "profile_pic": "https://randomuser.me/api/portraits/men/5.jpg",
+        "messages": [
+            {
+                "sender": "Ava Bennett",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Ava Bennett",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Ava Bennett",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Ava Bennett",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Ava Bennett",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Mason Collins",
+        "contact": "+91 958-576-5543",
+        "company": "Collins Corp",
+        "status": "In Progress",
+        "online" : false,
+        "profile_pic": "https://randomuser.me/api/portraits/women/6.jpg",
+        "messages": [
+            {
+                "sender": "Mason Collins",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Mason Collins",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Mason Collins",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Mason Collins",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Mason Collins",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Emily Scott",
+        "contact": "+91 968-676-6543",
+        "company": "Scott Ltd.",
+        "status": "Follow Up",
+        "online" : false,
+        "profile_pic": "https://randomuser.me/api/portraits/men/7.jpg",
+        "messages": [
+            {
+                "sender": "Emily Scott",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Emily Scott",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Emily Scott",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Emily Scott",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Emily Scott",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Ethan Wright",
+        "contact": "+91 978-776-7543",
+        "company": "Wright Enterprises",
+        "status": "Completed",
+        "online" : false,
+        "profile_pic": "https://randomuser.me/api/portraits/women/8.jpg",
+        "messages": [
+            {
+                "sender": "Ethan Wright",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Ethan Wright",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Ethan Wright",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Ethan Wright",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Ethan Wright",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Charlotte King",
+        "contact": "+91 988-876-8543",
+        "company": "King & Co.",
+        "status": "Upcoming",
+        "online" : true,
+        "profile_pic": "https://randomuser.me/api/portraits/men/9.jpg",
+        "messages": [
+            {
+                "sender": "Charlotte King",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Charlotte King",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Charlotte King",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Charlotte King",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Charlotte King",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Noah Martinez",
+        "contact": "+91 998-976-9543",
+        "company": "Martinez Industries",
+        "status": "In Progress",
+        "online" : true,
+        "profile_pic": "https://randomuser.me/api/portraits/women/10.jpg",
+        "messages": [
+            {
+                "sender": "Noah Martinez",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Noah Martinez",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Noah Martinez",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Noah Martinez",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Noah Martinez",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Isabella Lopez",
+        "contact": "+91 9108-1076-10543",
+        "company": "Lopez Global",
+        "status": "Follow Up",
+        "online" : false,
+        "profile_pic": "https://randomuser.me/api/portraits/men/11.jpg",
+        "messages": [
+            {
+                "sender": "Isabella Lopez",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Isabella Lopez",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Isabella Lopez",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Isabella Lopez",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Isabella Lopez",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "James Harris",
+        "contact": "+91 9118-1176-11543",
+        "company": "Harris Technologies",
+        "status": "Completed",
+        "online" : true,
+        "profile_pic": "https://randomuser.me/api/portraits/women/12.jpg",
+        "messages": [
+            {
+                "sender": "James Harris",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "James Harris",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "James Harris",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "James Harris",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "James Harris",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Amelia Clark",
+        "contact": "+91 9128-1276-12543",
+        "company": "Clark Solutions",
+        "status": "Upcoming",
+        "online" : false,
+        "profile_pic": "https://randomuser.me/api/portraits/men/13.jpg",
+        "messages": [
+            {
+                "sender": "Amelia Clark",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Amelia Clark",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Amelia Clark",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Amelia Clark",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Amelia Clark",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Lucas Lewis",
+        "contact": "+91 9138-1376-13543",
+        "company": "Lewis Innovations",
+        "status": "In Progress",
+        "online" : false,
+        "profile_pic": "https://randomuser.me/api/portraits/women/14.jpg",
+        "messages": [
+            {
+                "sender": "Lucas Lewis",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Lucas Lewis",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Lucas Lewis",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Lucas Lewis",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Lucas Lewis",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Mia Allen",
+        "contact": "+91 9148-1476-14543",
+        "company": "Allen Group",
+        "status": "Follow Up",
+        "online" : false,
+        "profile_pic": "https://randomuser.me/api/portraits/men/15.jpg",
+        "messages": [
+            {
+                "sender": "Mia Allen",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Mia Allen",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Mia Allen",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Mia Allen",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Mia Allen",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Logan Young",
+        "contact": "+91 9158-1576-15543",
+        "company": "Young Systems",
+        "status": "Completed",
+        "online" : false,
+        "profile_pic": "https://randomuser.me/api/portraits/women/16.jpg",
+        "messages": [
+            {
+                "sender": "Logan Young",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Logan Young",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Logan Young",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Logan Young",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Logan Young",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Harper Hill",
+        "contact": "+91 9168-1676-16543",
+        "company": "Hill Services",
+        "status": "Upcoming",
+        "online" : true,
+        "profile_pic": "https://randomuser.me/api/portraits/men/17.jpg",
+        "messages": [
+            {
+                "sender": "Harper Hill",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Harper Hill",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Harper Hill",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Harper Hill",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Harper Hill",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Alexander Adams",
+        "contact": "+91 9178-1776-17543",
+        "company": "Adams Consulting",
+        "status": "In Progress",
+        "online" : true,
+        "profile_pic": "https://randomuser.me/api/portraits/women/18.jpg",
+        "messages": [
+            {
+                "sender": "Alexander Adams",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Alexander Adams",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Alexander Adams",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Alexander Adams",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Alexander Adams",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Evelyn Baker",
+        "contact": "+91 9188-1876-18543",
+        "company": "Baker Manufacturing",
+        "status": "Follow Up",
+        "online" : false,
+        "profile_pic": "https://randomuser.me/api/portraits/men/19.jpg",
+        "messages": [
+            {
+                "sender": "Evelyn Baker",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Evelyn Baker",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Evelyn Baker",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Evelyn Baker",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Evelyn Baker",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Daniel Nelson",
+        "contact": "+91 9198-1976-19543",
+        "company": "Nelson Dynamics",
+        "status": "Completed",
+        "online" : false,
+        "profile_pic": "https://randomuser.me/api/portraits/women/20.jpg",
+        "messages": [
+            {
+                "sender": "Daniel Nelson",
+                "text": "Hey, how's your day going?",
+                "timestamp": "2025-03-06T10:00:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Pretty good! How about you?",
+                "timestamp": "2025-03-06T10:05:00Z"
+            },
+            {
+                "sender": "Daniel Nelson",
+                "text": "Not bad, just busy with work.",
+                "timestamp": "2025-03-06T10:10:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "I feel you. Work has been hectic for me too.",
+                "timestamp": "2025-03-06T10:15:00Z"
+            },
+            {
+                "sender": "Daniel Nelson",
+                "text": "Any plans for the weekend?",
+                "timestamp": "2025-03-06T10:20:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Thinking of going hiking. Wanna join?",
+                "timestamp": "2025-03-06T10:25:00Z"
+            },
+            {
+                "sender": "Daniel Nelson",
+                "text": "Sounds great! Where are you planning to go?",
+                "timestamp": "2025-03-06T10:30:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Probably the Green Valley trails.",
+                "timestamp": "2025-03-06T10:35:00Z"
+            },
+            {
+                "sender": "Daniel Nelson",
+                "text": "I've heard it's awesome! Let's do it.",
+                "timestamp": "2025-03-06T10:40:00Z"
+            },
+            {
+                "sender": "You",
+                "text": "Cool! I'll send you the details later.",
+                "timestamp": "2025-03-06T10:45:00Z"
+            }
+        ]
+    }
+]

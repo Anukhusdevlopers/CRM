@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import Message from "./Message";
 import styles from "./ChatBox.module.css";
 
-const ChatBox = ({ chatData, chats }) => {
+const ChatBox = ({ chats }) => {
   const [messages, setMessages] = useState([]);
   const messagesEndRef = useRef(null); // Ref for scrolling
 
   useEffect(() => {
-    setMessages(chatData?.messages || []);
-  }, [chatData]);
+    setMessages(chats?.messages || []);
+  }, [chats]);
 
   useEffect(() => {
     // Scroll to the last message whenever messages update
@@ -29,11 +29,11 @@ const ChatBox = ({ chatData, chats }) => {
     <div className={styles.chatContainer}>
       <div className={styles.chatHeader}>
         <img
-          className={`${chats.status === "online" ? styles.online : styles.offline}`}
-          src={chats.profileImage}
+          className={`${chats.online ? styles.online : styles.offline}`}
+          src={chats.profile_pic}
           alt="Profile"
         />
-        <span className={styles.chatName}>{chatData?.name || "Unknown"}</span>
+        <span className={styles.chatName}>{chats?.name || "Unknown"}</span>
       </div>
       <div className={styles.messages}>
         {messages.length > 0 ? (

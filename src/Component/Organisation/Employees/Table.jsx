@@ -1,15 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // ✅ Import navigation
 import styles from "./Table.module.css";
-import { useChat } from "../../../Context/Chat.context";
 
 export default function Table({ currentItems, getBadgeClass }) {
-  const { setSelectedChatId } = useChat(); // ✅ Get context
   const navigate = useNavigate(); // ✅ Initialize navigation
 
   const handleMessage = (employeeId) => {
-    setSelectedChatId(employeeId); // ✅ Set selected chat ID
-    navigate("/organisation/messages"); // ✅ Navigate to messages
+    navigate(`/organisation/messages/${employeeId}`); // ✅ Navigate to messages
   };
 
   return (
@@ -31,7 +28,7 @@ export default function Table({ currentItems, getBadgeClass }) {
               <tr key={employee.id} className={styles.tableRow}>
                 <td className={styles.tableCell}>
                   <div className={styles.employeeInfo}>
-                    <img src={employee.avatar} alt={employee.name} className={styles.avatar} />
+                    <img src={employee.profile_pic} alt={employee.name} className={styles.avatar} />
                     <div>
                       <div className={styles.employeeName}>{employee.name}</div>
                     </div>

@@ -19,7 +19,7 @@ const Table = ({ data }) => {
   const getPageNumbers = () => {
     const pageNumbers = [];
     const maxPagesToShow = 5; // Show at most 5 page numbers
-    
+
     if (totalPages <= maxPagesToShow) {
       // If we have 5 or fewer pages, show all of them
       for (let i = 1; i <= totalPages; i++) {
@@ -28,40 +28,40 @@ const Table = ({ data }) => {
     } else {
       // Always include first page
       pageNumbers.push(1);
-      
+
       // Calculate start and end of page numbers to show
       let startPage = Math.max(2, currentPage - 1);
       let endPage = Math.min(totalPages - 1, currentPage + 1);
-      
+
       // Adjust if we're near the beginning
       if (currentPage <= 3) {
         endPage = Math.min(totalPages - 1, 4);
       }
-      
+
       // Adjust if we're near the end
       if (currentPage >= totalPages - 2) {
         startPage = Math.max(2, totalPages - 3);
       }
-      
+
       // Add ellipsis after first page if needed
       if (startPage > 2) {
-        pageNumbers.push('...');
+        pageNumbers.push("...");
       }
-      
+
       // Add middle pages
       for (let i = startPage; i <= endPage; i++) {
         pageNumbers.push(i);
       }
-      
+
       // Add ellipsis before last page if needed
       if (endPage < totalPages - 1) {
-        pageNumbers.push('...');
+        pageNumbers.push("...");
       }
-      
+
       // Always include last page
       pageNumbers.push(totalPages);
     }
-    
+
     return pageNumbers;
   };
 
@@ -96,12 +96,25 @@ const Table = ({ data }) => {
                 </div>
               </td>
               <td>
-                <span className={`${styles.status} ${styles[item.status.toLowerCase()]}`}>
+                <span
+                  className={`${styles.status} ${
+                    styles[item.status.toLowerCase()]
+                  }`}
+                >
                   {item.status}
                 </span>
               </td>
-              <td style={{display: "flex", justifyContent : "space-evenly", alignItems : "center" , borderBottom: "1px"}}><button className={styles.cta}>Update</button>
-              <button className={styles.cta}>Message</button></td>
+              <td
+                style={{
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  alignItems: "center",
+                  borderBottom: "1px",
+                }}
+              >
+                <button className={styles.cta}>Update</button>
+                <button className={styles.cta}>Call</button>
+              </td>
             </tr>
           ))}
         </tbody>
@@ -110,9 +123,10 @@ const Table = ({ data }) => {
       {/* Enhanced Pagination Controls */}
       <div className={styles.pagination}>
         <div className={styles.paginationInfo}>
-          Showing {startIndex + 1} to {Math.min(endIndex, data.length)} of {data.length} employees
+          Showing {startIndex + 1} to {Math.min(endIndex, data.length)} of{" "}
+          {data.length} employees
         </div>
-        
+
         <div className={styles.paginationControls}>
           <button
             className={styles.pageButton}
@@ -121,21 +135,25 @@ const Table = ({ data }) => {
           >
             Prev
           </button>
-          
-          {getPageNumbers().map((page, index) => (
-            page === '...' ? (
-              <span key={`ellipsis-${index}`} className={styles.ellipsis}>...</span>
+
+          {getPageNumbers().map((page, index) =>
+            page === "..." ? (
+              <span key={`ellipsis-${index}`} className={styles.ellipsis}>
+                ...
+              </span>
             ) : (
               <button
                 key={`page-${page}`}
-                className={`${styles.pageNumber} ${currentPage === page ? styles.active : ''}`}
+                className={`${styles.pageNumber} ${
+                  currentPage === page ? styles.active : ""
+                }`}
                 onClick={() => setCurrentPage(page)}
               >
                 {page}
               </button>
             )
-          ))}
-          
+          )}
+
           <button
             className={styles.pageButton}
             disabled={currentPage === totalPages}

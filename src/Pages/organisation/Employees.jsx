@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Employees.module.css";
 import Table from "../../Component/Organisation/Employees/Table";
-import { generateEmployees } from "../../constants";
+import allEmployees from "../../constants/leadpanel-data.json";
 import OrganizationChart from "../../Component/Organisation/Employees/OrganisationChart";
 import PopupForm from "../../Component/Organisation/Employees/PopupForm";
 
@@ -12,8 +12,7 @@ const Employees = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [showPopup, setShowPopup] = useState(false);
 
-  const allEmployees = React.useMemo(() => generateEmployees(), []);
-  const maxEmployees = 40;
+  const maxEmployees = 20;
   const currentEmployees = allEmployees.length;
   const isMaxReached = currentEmployees >= maxEmployees;
 

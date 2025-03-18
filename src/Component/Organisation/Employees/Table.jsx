@@ -1,7 +1,17 @@
-import React from 'react'
-import styles from './Table.module.css'
+import React from "react";
+import { useNavigate } from "react-router-dom"; // ✅ Import navigation
+import styles from "./Table.module.css";
+import { useChat } from "../../../Context/Chat.context";
 
-export default function Table({currentItems , getBadgeClass}) {
+export default function Table({ currentItems, getBadgeClass }) {
+  const { setSelectedChatId } = useChat(); // ✅ Get context
+  const navigate = useNavigate(); // ✅ Initialize navigation
+
+  const handleMessage = (employeeId) => {
+    setSelectedChatId(employeeId); // ✅ Set selected chat ID
+    navigate("/organisation/messages"); // ✅ Navigate to messages
+  };
+
   return (
     <div>
       <div className={styles.tableContainer}>
@@ -24,20 +34,21 @@ export default function Table({currentItems , getBadgeClass}) {
                     <img src={employee.avatar} alt={employee.name} className={styles.avatar} />
                     <div>
                       <div className={styles.employeeName}>{employee.name}</div>
-                      <div className={styles.employeeEmail}>{employee.email}</div>
                     </div>
                   </div>
                 </td>
-                <td className={styles.tableCell}>{employee.phone}</td>
+                <td className={styles.tableCell}>{employee.contact}</td>
                 <td className={styles.tableCell}>
-                  <span className={`${styles.badge} ${getBadgeClass(employee.department)}`}>
-                    {employee.department}
+                  <span className={`${styles.badge} ${getBadgeClass(employee.Department)}`}>
+                    {employee.Department}
                   </span>
                 </td>
-                <td className={styles.tableCell}>{employee.role}</td>
-                <td className={styles.tableCell}>{employee.position}</td>
+                <td className={styles.tableCell}>{employee.Role}</td>
+                <td className={styles.tableCell}>{employee.Position}</td>
                 <td className={styles.tableCell}>
-                  <button className={styles.actionButton}>Message</button>
+                  <button className={styles.actionButton} onClick={() => handleMessage(employee.id)}>
+                    Message
+                  </button>
                   <button className={styles.actionButton}>See Details</button>
                 </td>
               </tr>
@@ -46,5 +57,5 @@ export default function Table({currentItems , getBadgeClass}) {
         </table>
       </div>
     </div>
-  )
+  );
 }

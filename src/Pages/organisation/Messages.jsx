@@ -3,9 +3,10 @@ import styles from "./Messages.module.css";
 import Data from "../../constants/leadpanel-data.json";
 import Chat from "../../Component/Organisation/Chat/Chat";
 import ChatBox from "../../Component/Organisation/Chat/ChatBox";
+import { useChat } from "../../Context/Chat.context";
 
 export default function Messages() {
-  const [selectedChatId, setSelectedChatId] = useState(null);
+  const {selectedChatId, setSelectedChatId} = useChat();
 
   // Find selected chat data
   const selectedChatData = Data.find((chat) => chat.id === selectedChatId);

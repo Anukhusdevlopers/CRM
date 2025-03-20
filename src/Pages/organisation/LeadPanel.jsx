@@ -7,12 +7,15 @@ import Select from "../../Component/Common/Select";
 import Data from "../../constants/leadpanel-data.json";
 import Table from "../../Component/Organisation/LeadPanel/Table";
 import Grid from "../../Component/Organisation/LeadPanel/Grid";
+import UpdateLead from "../../Component/Organisation/LeadPanel/UpdateLead";
 
 export default function LeadPanel() {
   const [view, setView] = useState("table");
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState(null);
   const [activeTab, setActiveTab] = useState("All");
+  const [updateLead, setUpdateLead] = useState(null);
+  const [selectedLead, setSelectedLead] = useState(null);
 
   const sortOptions = [
     { value: null, label: "Sort by" },
@@ -52,9 +55,15 @@ export default function LeadPanel() {
       case "C-Z2A":
         return b.company.localeCompare(a.company);
       case "V-ASC":
-        return parseFloat(a.value.replace("$", "")) - parseFloat(b.value.replace("$", ""));
+        return (
+          parseFloat(a.value.replace("$", "")) -
+          parseFloat(b.value.replace("$", ""))
+        );
       case "V-DESC":
-        return parseFloat(b.value.replace("$", "")) - parseFloat(a.value.replace("$", ""));
+        return (
+          parseFloat(b.value.replace("$", "")) -
+          parseFloat(a.value.replace("$", ""))
+        );
       default:
         return 0;
     }
@@ -122,13 +131,26 @@ export default function LeadPanel() {
                     Grid
                   </button>
                 </div>
-                <Select options={sortOptions} onChange={(e) => setSortBy(e.target.value)} />
+                <Select
+                  options={sortOptions}
+                  onChange={(e) => setSortBy(e.target.value)}
+                />
               </div>
             </div>
           </div>
+          {selectedLead && (
+            <UpdateLead
+              selectedLead={selectedLead}
+              setUpdateLead={setSelectedLead}
+            />
+          )}
 
           <div className={styles.tablebody}>
-            {view === "table" ? <Table data={sortedData} /> : <Grid data={sortedData} />}
+            {view === "table" ? (
+              <Table setSelectedLead={setSelectedLead} data={sortedData} />
+            ) : (
+              <Grid data={sortedData} />
+            )}
           </div>
         </div>
       </div>

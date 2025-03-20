@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Table.module.css";
 
-const Table = ({ data }) => {
+const Table = ({ data , setSelectedLead}) => {
   const rowsPerPage = 10;
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(data.length / rowsPerPage);
@@ -112,7 +112,7 @@ const Table = ({ data }) => {
                   borderBottom: "1px",
                 }}
               >
-                <button className={styles.cta}>Update</button>
+                <button className={styles.cta} onClick={() => setSelectedLead(item)}>Update</button>
                 <button className={styles.cta}>Call</button>
               </td>
             </tr>

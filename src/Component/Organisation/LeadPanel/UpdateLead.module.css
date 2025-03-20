@@ -1,0 +1,174 @@
+/* Full-screen dark overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Smooth Fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Container */
+.container {
+    width: 380px;
+    padding: 25px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transform: scale(0.95);
+    animation: scaleUp 0.2s ease-in-out forwards;
+}
+
+/* Scale effect when opening */
+@keyframes scaleUp {
+    from {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Close Button */
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.closeButton:hover {
+    color: #0A3B2C;
+}
+
+/* Headings */
+.heading {
+    font-size: 22px;
+    color: #0A3B2C;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.note {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Form Styling */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0A3B2C;
+    margin-top: 12px;
+}
+
+/* Inputs & Textarea */
+.input,
+.textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: 0.3s ease;
+    font-size: 14px;
+}
+
+.input:focus,
+.textarea:focus {
+    border-color: #0A3B2C;
+    outline: none;
+    box-shadow: 0 0 6px rgba(10, 59, 44, 0.3);
+}
+
+.textarea {
+    height: 70px;
+    resize: none;
+}
+
+/* Checkboxes */
+.checkboxGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.checkboxLabel:hover {
+    color: #0A3B2C;
+}
+
+.checkboxLabel input {
+    accent-color: #0A3B2C;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Follow-Up Date & Time */
+.followup {
+    display: flex;
+    gap: 10px;
+}
+
+/* Submit Button */
+.button {
+    background: #0A3B2C;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background: #08633f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(10, 59, 44, 0.2);
+}

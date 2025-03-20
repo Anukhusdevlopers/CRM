@@ -1,40 +1,72 @@
-  import React from "react";
-  import { useParams, useNavigate } from "react-router-dom"; // Dynamic Routing
-  import styles from "./Messages.module.css";
-  import Data from "../../constants/leadpanel-data.json";
-  import Chat from "../../Component/Organisation/Chat/Chat";
-  import ChatBox from "../../Component/Organisation/Chat/ChatBox";
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import styles from "./Messages.module.css";
+import Data from "../../constants/leadpanel-data.json";
+import Chat from "../../Component/Organisation/Chat/Chat";
+import ChatBox from "../../Component/Organisation/Chat/ChatBox";
 
-  export default function Messages() {
-    const { chatId } = useParams(); // Get chatId from URL
-    const navigate = useNavigate(); 
+export default function Messages() {
+  const { chatId } = useParams();
+  const navigate = useNavigate();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-    // Find selected chat data
-    const selectedChatData = Data.find((chat) => chat.id === parseInt(chatId));
+  // Track window resize
+  console.log(windowWidth);
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-    console.log(Data.find((chat) => chat.id === 1))
-    return (
-      <div className={styles.container}>
-        {/* Chat List */}
+  // Find selected chat data
+  const selectedChatData = Data.find((chat) => chat.id === parseInt(chatId));
+
+  return (
+    <div className={styles.container}>
+      {/* Chat List */}
+      { windowWidth <=1000 ?  !selectedChatData && (
         <div className={styles.chatList}>
           <div className={styles.header}>
             <h3>Messages</h3>
           </div>
           <div className={styles.body}>
             {Data.map((chat) => (
-              <div key={chat.id} onClick={() => navigate(`/organisation/messages/${chat.id}`)}> {/* Navigate on click */}
+              <div
+                key={chat.id}
+                onClick={() => navigate(`/organisation/messages/${chat.id}`)}
+              >
                 <Chat data={chat} />
               </div>
             ))}
           </div>
         </div>
+      ) :  <div className={styles.chatList}>
+      <div className={styles.header}>
+        <h3>Messages</h3>
+      </div>
+      <div className={styles.body}>
+        {Data.map((chat) => (
+          <div
+            key={chat.id}
+            onClick={() => navigate(`/organisation/messages/${chat.id}`)}
+          >
+            <Chat data={chat} />
+          </div>
+        ))}
+      </div>
+    </div>}
 
-        {/* ChatBox */}
-        
+      {windowWidth <= 1000 && selectedChatData && (
+        <div className={styles.chatBoxSm}>
+          <ChatBox chats={selectedChatData} />
+        </div>
+      )}
+
+      {/* ChatBox */}
+      {windowWidth > 1000 && (
         <div className={styles.chatBox}>
           {selectedChatData ? (
             <ChatBox chats={selectedChatData} />
-
           ) : (
             <div className={styles.emptyChatBox}>
               <div className={styles.illustration}>
@@ -51,12 +83,13 @@
                 </svg>
               </div>
               <h3 className={styles.emptyTitle}>No Conversation Selected</h3>
-              <p className={styles.emptySubtitle}>Pick a chat to start messaging with your friends.</p>
+              <p className={styles.emptySubtitle}>
+                Pick a chat to start messaging with your friends.
+              </p>
             </div>
           )}
         </div>
-        
-      </div>
-    );
-  }
-  
+      )}
+    </div>
+  );
+}

@@ -3,7 +3,7 @@
   flex-direction: column;
   min-width: 300px;
   width: 100%;
-  height: 95%;
+  height: 100%;
   border-radius: 7px;
   border: 1px solid #dbdbdb;
   background: #f8f8f8;
@@ -12,7 +12,12 @@
   font-family: Arial, sans-serif;
   position: relative;
 }
-
+.closeicon{
+  position: absolute;
+  background: transparent;
+  border: none;
+  right: 30px;
+}
 /* Chat Header */
 .chatHeader {
   display: flex;
@@ -265,3 +270,4 @@
     padding: 7px 14px;
   }
 }
+

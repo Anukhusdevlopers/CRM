@@ -1,10 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import Message from "./Message";
 import styles from "./ChatBox.module.css";
+import { X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const ChatBox = ({ chats }) => {
   const [messages, setMessages] = useState([]);
   const messagesEndRef = useRef(null); // Ref for scrolling
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     setMessages(chats?.messages || []);
@@ -34,6 +38,7 @@ const ChatBox = ({ chats }) => {
           alt="Profile"
         />
         <span className={styles.chatName}>{chats?.name || "Unknown"}</span>
+        <button onClick={() => navigate('/organisation/messages')} className={styles.closeicon} ><X /></button>
       </div>
       <div className={styles.messages}>
         {messages.length > 0 ? (

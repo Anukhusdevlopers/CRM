@@ -7,7 +7,7 @@ import ChatBox from "../../Component/Organisation/Chat/ChatBox";
 
 export default function Messages() {
   const { chatId } = useParams(); // Get chatId from URL
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   // Find selected chat data
   const selectedChatData = Data.find((chat) => chat.id === parseInt(chatId));
@@ -53,6 +53,7 @@ export default function Messages() {
           </div>
         )}
       </div>
+      
     </div>
   );
 }

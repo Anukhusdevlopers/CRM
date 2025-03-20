@@ -1,0 +1,169 @@
+.container {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 9;
+    padding: 20px;
+    max-width: 500px;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header .left {
+    align-items: center;
+    color: #000000d7;
+    display: flex;
+}
+
+.header .left .arrow button {
+    background: transparent;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    margin-right: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right button {
+    background: transparent;
+    border: none;
+
+}
+
+.profile {
+    display: flex;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+}
+
+.top button {
+    background: green;
+    border: 1px solid #e0e0e0;
+    padding: 0 15px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+    height: 40px;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bottom div {
+    margin-right: 20px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    padding: 4px 8px;
+    color: #fff;
+    justify-content: center;
+}
+
+.status .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background: white;
+}
+
+.status.online {
+    background-color: #4caf50; /* Green for active */
+    color: white;
+  }
+  
+  .status.offline {
+    background-color: #9e9e9e; /* Grey for offline */
+    color: white;
+  }
+.image {
+    margin-top: 20px;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    background: #0000001d;
+    border-radius: 50%;
+}
+
+.profile .details {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.profile .details span {
+    color: #333333e6;
+    font-size: 12px;
+}
+/* Existing styles remain unchanged */
+
+.body {
+    padding: 20px;
+    background: #ffffff;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  /* Personal & Education Section */
+  .section {
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+  
+  .heading {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+  }
+  
+  /* Info Row */
+  .infoItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    color: #333;
+    margin-right: 12px;
+    font-size: 10px;
+  }
+  
+  .text {
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .text h4 {
+    font-weight: 600;
+    margin: 0;
+  }
+  

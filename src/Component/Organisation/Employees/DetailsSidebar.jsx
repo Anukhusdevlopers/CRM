@@ -1,56 +1,155 @@
-import React from "react";
-import styles from "./Sidebar.module.css";
-import { Mail, Phone, User, Cake, MapPin, GraduationCap, School, Clipboard } from "lucide-react";
+import React, { useEffect, useRef } from "react";
+import styles from "./DetailsSidebar.module.css";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import Employees from "../../../constants/leadpanel-data.json";
 
-export default function Sidebar() {
+import {
+  Mail,
+  Phone,
+  User,
+  Calendar,
+  MapPin,
+  GraduationCap,
+  Landmark,
+  BookOpenCheck,
+} from "lucide-react";
+
+export default function EmployeeDetailsSidebar({ setSidebar, sidebar }) {
+  const sidebarRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setSidebar(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [setSidebar]);
+
   return (
-    <div className={styles.sidebar}>
-      {/* Personal Information */}
-      <div className={styles.section}>
-        <h3 className={styles.sectionTitle}>Personal Information</h3>
-        <div className={styles.infoRow}>
-          <Mail className={styles.icon} />
-          <span className={styles.email}>kristisipes@gmail.com</span>
+    <div className={styles.overlay}>
+      <div className={styles.container} ref={sidebarRef}>
+        {/* Header */}
+        <div className={styles.header}>
+          <div className={styles.left}>
+            <div className={styles.arrow}>
+              <button>
+                <ChevronLeft />
+              </button>
+            </div>
+            <div className={styles.arrow}>
+              <button>
+                <ChevronRight />
+              </button>
+            </div>
+            x out of n
+          </div>
+          <div className={styles.right}>
+            <button onClick={() => setSidebar(null)}>
+              <X />
+            </button>
+          </div>
         </div>
-        <div className={styles.infoRow}>
-          <Phone className={styles.icon} />
-          <span>+62-921-019-112</span>
-        </div>
-        <div className={styles.infoRow}>
-          <User className={styles.icon} />
-          <span>Female</span>
-        </div>
-        <div className={styles.infoRow}>
-          <Cake className={styles.icon} />
-          <span>May 20, 2000</span>
-        </div>
-        <div className={styles.infoRow}>
-          <MapPin className={styles.icon} />
-          <span>New York, NY, 10001, United States</span>
-        </div>
-      </div>
 
-      {/* Education Information */}
-      <div className={styles.section}>
-        <h3 className={styles.sectionTitle}>Education Information</h3>
-        <div className={styles.infoRow}>
-          <School className={styles.icon} />
-          <span>Boston University</span>
+        {/* Profile Section */}
+        <div className={styles.profile}>
+          <div className={styles.image}></div>
+          <div className={styles.details}>
+            <div className={styles.top}>
+              <h3>{Employees[sidebar].name}</h3>
+              <button>Message</button>
+            </div>
+            <div className={styles.bottom}>
+              <div>
+                <span>Designation</span>
+                <h4>{Employees[sidebar].company}</h4>
+              </div>
+              <div>
+                <span>Joining Date</span>
+                <h4>{Employees[sidebar].joiningDate}</h4>
+              </div>
+              <div>
+                <div
+                  className={`${styles.status} ${
+                    Employees[sidebar].online ? styles.online : styles.offline
+                  }`}
+                >
+                  <div className={styles.dot}></div>
+                  {Employees[sidebar].online ? "Active" : "Offline"}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className={styles.infoRow}>
-          <GraduationCap className={styles.icon} />
-          <span>Bachelor of Engineering</span>
-        </div>
-        <div className={styles.infoRow}>
-          <Clipboard className={styles.icon} />
-          <span>Year Graduation: 2014</span>
-        </div>
-      </div>
 
-      {/* Notes Section */}
-      <div className={styles.notes}>
-        <h3 className={styles.sectionTitle}>Notes</h3>
-        <textarea className={styles.noteInput} placeholder="Write note..."></textarea>
+        {/* Sidebar Body with Profile Info */}
+        <div className={styles.body}>
+          {/* Personal Information */}
+          <div className={styles.section}>
+            <h2 className={styles.heading}>Personal Information</h2>
+            <div className={styles.infoItem}>
+              <Mail className={styles.icon} />
+              <span className={styles.text}>
+                Email : {Employees[sidebar].email}
+              </span>
+            </div>
+            <div className={styles.infoItem}>
+              <Phone className={styles.icon} />
+              <span className={styles.text}>
+                Phone : {Employees[sidebar].contact}
+              </span>
+            </div>
+            <div className={styles.infoItem}>
+              <User className={styles.icon} />
+              <span className={styles.text}>
+                Gender : {Employees[sidebar].gender}
+              </span>
+            </div>
+            <div className={styles.infoItem}>
+              <Calendar className={styles.icon} />
+              <span className={styles.text}>
+                Birthdate : {Employees[sidebar].birthday}
+              </span>
+            </div>
+            <div className={styles.infoItem}>
+              <MapPin className={styles.icon} />
+              <span className={styles.text}>
+                Address : {Employees[sidebar].address}
+              </span>
+            </div>
+          </div>
+
+          {/* Education Information */}
+          <div className={styles.section}>
+            <h2 className={styles.heading}>Education Information</h2>
+            <div className={styles.infoItem}>
+              <Landmark className={styles.icon} />
+              <span className={styles.text}>
+                University : {Employees[sidebar].university}
+              </span>
+            </div>
+            <div className={styles.infoItem}>
+              <GraduationCap className={styles.icon} />
+              <span className={styles.text}>
+                Qualification : {Employees[sidebar].qualification}
+              </span>
+            </div>
+            <div className={styles.infoItem}>
+              <BookOpenCheck className={styles.icon} />
+              <span className={styles.text}>
+                Year Graduation : {Employees[sidebar].yearGraduation}
+              </span>
+            </div>
+            <div className={styles.infoItem}>
+              <User className={styles.icon} />
+              <span className={styles.text}>Referral : Not Provided</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

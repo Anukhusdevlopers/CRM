@@ -4,6 +4,7 @@ import Table from "../../Component/Organisation/Employees/Table";
 import allEmployees from "../../constants/leadpanel-data.json";
 import OrganizationChart from "../../Component/Organisation/Employees/OrganisationChart";
 import PopupForm from "../../Component/Organisation/Employees/PopupForm";
+import EmployeeDetailsSidebar from "../../Component/Organisation/Employees/DetailsSidebar";
 
 const Employees = () => {
   const [activeTab, setActiveTab] = useState("manage");
@@ -11,6 +12,8 @@ const Employees = () => {
   const [itemsPerPage] = useState(10);
   const [searchTerm, setSearchTerm] = useState("");
   const [showPopup, setShowPopup] = useState(false);
+
+  const [ sidebar, setSidebar ] = useState(null)
 
   const maxEmployees = 20;
   const currentEmployees = allEmployees.length;
@@ -183,7 +186,7 @@ const Employees = () => {
             </div>
           </div>
 
-          <Table currentItems={currentItems} getBadgeClass={getBadgeClass} />
+          <Table setSidebar={setSidebar} currentItems={currentItems} getBadgeClass={getBadgeClass} />
 
           {currentItems.length > 9 && (
             <div className={styles.pagination}>
@@ -201,6 +204,9 @@ const Employees = () => {
       ) : (
         <OrganizationChart />
       )}
+      {
+        sidebar ? <EmployeeDetailsSidebar sidebar={sidebar} setSidebar={setSidebar} /> : null
+      }
     </div>
   );
 };

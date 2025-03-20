@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom"; // ✅ Import navigation
 import styles from "./Table.module.css";
 
-export default function Table({ currentItems, getBadgeClass }) {
+export default function Table({ currentItems, getBadgeClass, setSidebar }) {
   const navigate = useNavigate(); // ✅ Initialize navigation
 
   const handleMessage = (employeeId) => {
@@ -46,7 +46,7 @@ export default function Table({ currentItems, getBadgeClass }) {
                   <button className={styles.actionButton} onClick={() => handleMessage(employee.id)}>
                     Message
                   </button>
-                  <button className={styles.actionButton}>See Details</button>
+                  <button onClick={() => setSidebar(employee.id)} className={styles.actionButton}>See Details</button>
                 </td>
               </tr>
             ))}

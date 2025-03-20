@@ -13,9 +13,16 @@ import {
   Landmark,
   BookOpenCheck,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function EmployeeDetailsSidebar({ setSidebar, sidebar }) {
   const sidebarRef = useRef(null);
+
+  const navigate = useNavigate(); // ✅ Initialize navigation
+
+  const handleMessage = (employeeId) => {
+    navigate(`/organisation/messages/${employeeId}`); // ✅ Navigate to messages
+  };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -61,7 +68,7 @@ export default function EmployeeDetailsSidebar({ setSidebar, sidebar }) {
           <div className={styles.details}>
             <div className={styles.top}>
               <h3>{Employees[sidebar].name}</h3>
-              <button>Message</button>
+              <button onClick={() => handleMessage(Employees[sidebar].id)} >Message</button>
             </div>
             <div className={styles.bottom}>
               <div>

@@ -44,16 +44,16 @@ export default function EmployeeDetailsSidebar({ setSidebar, sidebar }) {
         <div className={styles.header}>
           <div className={styles.left}>
             <div className={styles.arrow}>
-              <button>
+              <button onClick={() => setSidebar(prev => prev--)}>
                 <ChevronLeft />
               </button>
             </div>
             <div className={styles.arrow}>
-              <button>
-                <ChevronRight />
+              <button onClick={() => setSidebar(prev => prev++)}>
+                <ChevronRight  />
               </button>
             </div>
-            x out of n
+            {`${Employees[sidebar].id} out of ${Employees.length}`}
           </div>
           <div className={styles.right}>
             <button onClick={() => setSidebar(null)}>
